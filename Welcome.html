@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>UWA Enrolment and Studies Guide</title>
+        <style>
+            body{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)),url("https://www.careers.uwa.edu.au/__data/assets/image/0005/3451802/WebsiteBanner-UWASunrise.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                color: whitesmoke;
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0px;
+            }
+            #topNav{
+                background-color: rgba(39,52,139,255);
+                padding: 14px 16px;
+                overflow: hidden;
+                position: fixed;
+                top: 0%;
+                width: 100%;
+            }
+            #topNav a{
+                text-align: left;
+                padding: 14px 16px;
+            }
+            #topNav p{
+                display: inline;
+                text-align: right;
+                padding: 14px 16px;
+            }
+            .mainContainer{
+                border-radius: 20px;
+                left: 50px;
+                top: 50;
+                height: 300px;
+                margin: 0 auto;
+                margin-top: 150px;
+                width: 400px;
+                background-color: rgba(1, 0, 54, 0.5);
+            }
+            .mainContainer h1{
+                margin-left: 25px;
+                padding-top: 20px;
+            }
+            .inputContainer{
+                display: flex;
+                width: 80%;
+                margin-bottom: 15px;
+                margin-left: 25px;
+            }
+            .inputField{
+                width: 100%;
+                padding: 10px;
+                outline: none;
+                border-radius: 5px;
+            }
+            .optionsContainer{
+                margin-left: 25px;
+                margin-right: 25px;
+                font-size: 12px;
+            }
+            .submitContainer{
+                line-height: 1px;
+                font-size: 10px;
+                height: 50px;
+                width: 30%;
+                margin: 0 auto;
+                text-align: center;
+                bottom: 0;
+            }
+            .button{
+                font-size: 15px;
+                font-weight: bolder;
+                border-radius: 5px;
+                padding: 15px;
+                background-color:rgba(226,182,0,255);
+                color:rgba(39,52,139,255);
+            }
+            i{
+                padding: 10px;
+                text-align: center;
+                min-width: 50px;
+                background-color:rgba(226,182,0,255);
+                color:rgba(39,52,139,255);
+                border-radius:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="topNav">
+            <a>CITS3403</a>
+            <p>A free guide to enrolment and studying at UWA</p>
+        </div>
+        <div class="mainContainer">
+            <h1>WELCOME</h1>
+            <div>
+                <form>
+                    <div class="inputContainer">
+                        <i class="material-icons">account_circle</i>
+                        <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br>
+                    </div>
+                    <div class="inputContainer">
+                        <i class="material-icons">vpn_key</i>
+                        <input class="inputField" type="password" id="pass" name="pass" placeholder="Enter your password"><br>
+                    </div>
+                </form>
+            </div>
+            <div class="optionsContainer">
+                <label>Remember Me
+                    <input type="checkbox" style="display:inline; float:left">
+                    <span class="checkmark"></span>
+                </label>
+                <a href="" style="float: right; color: blue;">Forgot password?</a>
+            </div> 
+            <div class="submitContainer">
+                <button class="button" style="font-size: 15px;" href="homePage.html">Log In</button>
+                <p>Don't have an account?</p>
+                <a href="" style="color: blue;">Register here!</a>
+            </div>
+        </div>
+    </body>
+</html>
