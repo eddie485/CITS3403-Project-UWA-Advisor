@@ -43,4 +43,15 @@ h1{
     color: whitesmoke;
 }
 
+.container-fluid{
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.4;
+    text-rendering: optimizeLegibility;
+    font-family: "TTNormsPro",Arial,sans-serif;
+    text-align: center;
+    background-color: white;
+}
+
+
 
