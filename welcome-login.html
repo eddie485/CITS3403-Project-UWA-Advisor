@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="welcome-style.css">
+        <title>UWA Enrolment and Studies Guide</title>
+    </head>
+    <body>
+        <div id="topNav">
+            <a>UWA Advisor</a>
+            <p>A free guide to enrolment and studying at UWA</p>
+        </div>
+        <div class=mainContainer style="height: 50px; margin-top: 50px; display:none" id="hidden">
+            <p id="msg" style="font-size: small; margin: 10px; text-align: center;"></p>
+        </div>
+        <!--hidden div called demo that is used for propmpt-->
+        <div class="mainContainer" id="mainForm" style="height:300px;">
+            <h1>WELCOME</h1>
+            <div>
+                <form>
+                    <div class="inputContainer">
+                        <i class="material-icons">account_circle</i>
+                        <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br>
+                    </div>
+                    <div class="inputContainer">
+                        <i class="material-icons">vpn_key</i>
+                        <input class="inputField" type="password" id="pass" name="pass" placeholder="Enter your password"><br>
+                    </div>
+                </form>
+            </div>
+            <div class="optionsContainer">
+                <label>Remember Me
+                    <input type="checkbox" style="display:inline; float:left">
+                    <span class="checkmark"></span>
+                </label>
+                <button onclick="openPopup()" style="float: right; color: blue; background-color: transparent;">Forgot password?</a>
+            </div> 
+            <div class="submitContainer">
+                <button class="button" style="font-size: 15px;" href="homePage.html">Log In</button>
+                <p>Don't have an account?</p>
+                <a href="welcome-registration.html" style="color: blue;">Register here!</a>
+            </div>
+        </div>
+        <script>
+            function openPopup() {
+                var txt;
+                var email = prompt("Please enter your email:");
+                if (email == null || email == "") {
+                    return;
+                } 
+                else {
+                    txt = "An email has been sent to " + email + " explaining how to reset your password. Once completed, please refresh the page to try and login again";
+                }
+                document.getElementById("msg").innerHTML=txt;
+                var reveal = document.getElementById("hidden");
+                reveal.style.display="block";
+            }
+        </script>
+    </body>
+</html>
