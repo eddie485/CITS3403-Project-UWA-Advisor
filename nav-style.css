@@ -45,8 +45,6 @@ h1{
     color: whitesmoke;
 }
 
-<<<<<<< HEAD
-=======
 .container-fluid{
     margin-bottom: 1rem;
     font-size: inherit;
@@ -56,14 +54,14 @@ h1{
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "TTNormsPro",Arial,sans-serif;
 }
 
 footer {
     text-align: center;
     padding: 6px;
     background-color:rgba(39,52,139,255);
-    color: #e2b600;
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -75,5 +73,4 @@ a {
 a:hover {
     color: hotpink;
   }
->>>>>>> 6565a22 (Homepage update V2)
 
