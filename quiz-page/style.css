@@ -1,0 +1,27 @@
+/* test */
+    .navbar {
+        background: blue;
+        
+    }
+    .nav-link{
+        /* margin-left: 50%; */
+    }
+
+    .header {
+        background-image: url('images/image-20150902-6700-t2axrz.jpg');
+        background-attachment: fixed;
+        background-size: contain;
+    }
+
+    .overlay {
+        position: absolute;
+        min-height: 100%;
+        max-height: 100%;
+        left:0;
+        top:0;
+        background: rgb(50, 255, 187, 1)
+    }
+    .overlay-words{
+        position: absolute;
+
+    }
