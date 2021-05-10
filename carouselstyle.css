@@ -48,3 +48,8 @@ a {
     text-decoration:underline;
     color:lightblue;
 }
+.def-text{
+    font-weight:bold;
+    font-style:italic;
+    text-decoration: underline;
+}
