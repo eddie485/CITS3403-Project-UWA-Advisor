@@ -25,7 +25,13 @@
                 border: 10px solid rgba(226,182,0,255);
                 border-radius: 45%;
             }
-            .study-plan-shortcut{
+            .edit-button{
+                float:right;
+                background-color:rgba(226,182,0,255); 
+                color:rgba(39,52,139,255); 
+                border-radius: 15%;
+            }
+            .results-shortcut{
                 font-size: 15px;
                 font-weight: bolder;
                 border-radius: 5px;
@@ -81,7 +87,7 @@
                         <div class="card shadow-sm" style="height:365px">
                                 <div class="card-header bg-transparent text-center">
                                     <img class="profile-pic" src="https://i.pinimg.com/originals/13/16/c6/1316c631f23bc01d9b3b37e917edd9a8.jpg" alt="profile picture">
-                                    <h3>Monkey D. Luffy</h3>
+                                    <h3 id="editable" contenteditable="false">Monkey D. Luffy</h3>
                                 </div>
                                 <div class="card-body">
                                     <p class="mb-0"><strong class="pr-1">Student ID:</strong>23851174</p>
@@ -94,26 +100,26 @@
                         <div class="card shadow-sm">
                             <div class="card-header bg-transparent border-0">
                                 <h3 class="mb-0">Account Details
-                                    <a href="" class="material-icons"style="float:right; color:rgba(226,182,0,255)">border_color</a>
+                                    <button class="material-icons edit-button" onclick="editFunction();">border_color</button>
                                 </h3>
                             </div>
                             <div class="card-body pt-0">
                                 <table class="table" style="color: whitesmoke">
                                     <tr>
                                         <th width="25%">Username</th>
-                                        <td>strawHat123</td>
+                                        <td id="editable" contenteditable="false">strawHat123</td>
                                     </tr>
                                     <tr>
                                         <th width="25%">Email</th>
-                                        <td>kingOfPirates@onepiece.com</td>
+                                        <td contenteditable="true" id="editable">kingOfPirates@onepiece.com</td>
                                     </tr>
                                     <tr>
                                         <th width="25%">Date of Birth</th>
-                                        <td>05/05/1999</td>
+                                        <td contenteditable="true" id="editable">05/05/1999</td>
                                     </tr>
                                     <tr>
                                         <th width="25%">Password</th>
-                                        <td>**********</td>
+                                        <td contenteditable="true" id="editable">**********</td>
                                     </tr>
                                 </table>
                             </div>
@@ -122,11 +128,22 @@
                             <!--empty div to put space between two cards on the same column length-->
                         </div> 
                         <div class="card shadow-sm">
-                            <button class="study-plan-shortcut">My Results</button>
+                            <button class="results-shortcut">My Results</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            function editFunction(){
+                var x = document.getElementById("editable");
+                if (x.contentEditable == "false") {
+                    x.contentEditable = "true";
+                } 
+                else {
+                    x.contentEditable = "false";
+                }            
+            }
+        </script>
     </body>
 </html>
