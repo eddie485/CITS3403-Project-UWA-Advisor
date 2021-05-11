@@ -117,7 +117,7 @@ button:hover{
     background-color: #38a;
 }
 
-.slide{
+.slideQuiz{
     position: absolute;
     left: 0px;
     top: 0px;
@@ -135,6 +135,10 @@ button:hover{
     position: relative;
     height: 200px;
     margin-top: 40px;
+<<<<<<< HEAD
 }
 
 
+=======
+}
+>>>>>>> 1b02225e3119a8a1fe8e3ab8b1f50b04b6749dd0
