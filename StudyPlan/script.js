@@ -16,10 +16,12 @@ containers.forEach(container => {
         e.preventDefault()
         const afterElement = getDragAfterElement(container, e.clientX)
         const draggable = document.querySelector('.dragging')
-        if (afterElement == null) {
-            container.appendChild(draggable)
-        } else {
-            container.insertBefore(draggable, afterElement)
+        if (container.childElementCount < 4) {
+            if (afterElement == null) {
+                container.appendChild(draggable)
+            } else {
+                container.insertBefore(draggable, afterElement)
+            }
         }
     })
 })

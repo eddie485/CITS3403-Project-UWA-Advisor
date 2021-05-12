@@ -1,7 +1,5 @@
 body {
-    margin: 0;
-    background-color: #333;
-    font-family: 'Roboto 300', sans-serif;
+    font-family: "TTNormsPro",Arial,sans-serif;
 }
 .side {
     float: right;
@@ -15,9 +13,8 @@ body {
 }
 
 .container {
-    display: table 4;
     border: 5px solid black;
-    background-color: white;
+    background-color: rgb(236,236,236);
     padding-left: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -47,7 +44,7 @@ body {
 }
 
 .majors {
-    background-color: rgb(214, 182, 0);
+    background-color: rgba(39,52,139,255);;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -64,7 +61,7 @@ body {
   .majorlist {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: rgb(222,184,42);
     min-width: 160px;
   }
   
@@ -83,4 +80,4 @@ body {
   .dropdown:hover .majorlist {display: block;}
   
   /* Changes color of containing div on hover*/
-  .dropdown:hover .majors {background-color:rgb(161, 137, 1);}
+  .dropdown:hover .majors {background-color:rgb(35,46,117);}
