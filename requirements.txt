@@ -1,8 +1,5 @@
 click==8.0.0
-<<<<<<< HEAD
 colorama==0.4.4
-=======
->>>>>>> ba2954ae45d64919a55b69778c8a8df72f9e392a
 Flask==2.0.0
 itsdangerous==2.0.0
 Jinja2==3.0.0
