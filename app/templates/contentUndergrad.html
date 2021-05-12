@@ -1,65 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head> 
-        <title> Undergraduate Degree at UWA </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
-        <!-- Importing bootstrap stylesheet -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <!-- Importing navigation stylesheet that modifies bootstrap to fit UWA aesthetic -->
-        <link rel="stylesheet" type="text/css" href="Styles/nav-style.css">
-        <link rel="stylesheet" type="text/css" href="Styles/carouselstyle.css">
-        <!-- Importing important modules for bootstrap -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <style>
-            a {
-                text-decoration:underline;
-                color:lightblue;
-            }
-            .def-text {
-                font-weight:bold;
-                font-style:italic;
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body> 
-        <header>
-            <h1 style="text-align: center;"> UWA Advisor </h1>
-        </header>
-        <nav class="navbar sticky-top navbar-expand-md">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="homePage.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
-                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contents</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="contentUndergrad.html">Undergraduate</a>
-                            <a class="dropdown-item" href="contentEnrolment.html">Enrolment</a>
-                            <a class="dropdown-item" href="contentPostgrad.html">Postgradraduate</a>
-                            <a class="dropdown-item" href="contentAddInfoAndDefinitions.html">Additional Information and Definitions</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Study Plan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Tests</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">Profile</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+{%extends "base.html" %}
+{%block head%}
+    <style>
+        a {
+            text-decoration:underline;
+            color:lightblue;
+        }
+        .def-text {
+            font-weight:bold;
+            font-style:italic;
+            text-decoration: underline;
+        }
+    </style>
+{%endblock%}
+{%block body%}
         <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
             <h1 style="color:rgba(39,52,139,255)"> The Undergraduate Degree at UWA </h1>
             <p style="margin-top:20px; margin-left:150px; margin-right:150px; font-size:20px;"> Welcome to our guide on how to enrol at UWA! Whether you have recently graduated from high school, are switching universities, or joining us from overseas, you can look forward to a seamless and easy-to-access guide on enrolling at the best university in Western Australia! </p>
@@ -184,8 +137,8 @@
                             <p> Once you have chosen the majors, minors, broadening units and or electives that you wish to undertake, plan out the units in which you with to enrol using a study plan! Keep in mind that you can only enrol for one calendar year at a time, however you can plan out your entire degree in a study plan. </p>
                             <p> A study plan is a list of units you want to enrol in over the course of your degree - it may look like this: (Click on either to open a downloadable study plan pdf) </p>
                             <a href="https://handbooks.uwa.edu.au/docs/Course-Study-Plan-and-Checklist.pdf" target="_blank">
-                                <img src="Images/CourseStudyPlan1.png" alt="CoursePlan1" style="width:350px; height:250px; float:left;"> 
-                                <img src="Images/CourseStudyPlan2.png" alt="CoursePlan2" style="width:350px; height:250px; padding-left:5px;">
+                                <img src="{{ url_for('static', filename='Images/CourseStudyPlan1.png')}}" alt="CoursePlan1" style="width:350px; height:250px; float:left;"> 
+                                <img src="{{ url_for('static', filename='Images/CouresStudyPlan2.png')}}" alt="CoursePlan2" style="width:350px; height:250px; padding-left:5px;">
                             </a>
                         </div>
                     </div>
@@ -211,5 +164,6 @@
                 </script>
             </div>
         </div>
+{%endblock%}
     </body>
 </html>
