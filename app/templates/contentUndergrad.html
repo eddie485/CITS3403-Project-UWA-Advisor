@@ -1,65 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head> 
-        <title> Undergraduate Degree at UWA </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
-        <!-- Importing bootstrap stylesheet -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <!-- Importing navigation stylesheet that modifies bootstrap to fit UWA aesthetic -->
-        <link rel="stylesheet" type="text/css" href="Styles/nav-style.css">
-        <link rel="stylesheet" type="text/css" href="Styles/carouselstyle.css">
-        <!-- Importing important modules for bootstrap -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <style>
-            a {
-                text-decoration:underline;
-                color:lightblue;
-            }
-            .def-text {
-                font-weight:bold;
-                font-style:italic;
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body> 
-        <header>
-            <h1 style="text-align: center;"> UWA Advisor </h1>
-        </header>
-        <nav class="navbar sticky-top navbar-expand-md">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="homePage.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
-                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contents</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="contentUndergrad.html">Undergraduate</a>
-                            <a class="dropdown-item" href="contentEnrolment.html">Enrolment</a>
-                            <a class="dropdown-item" href="contentPostgrad.html">Postgradraduate</a>
-                            <a class="dropdown-item" href="contentAddInfoAndDefinitions.html">Additional Information and Definitions</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Study Plan</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Tests</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">Profile</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+{%extends "base.html" %}
+{%block head%}
+    <style>
+        a {
+            text-decoration:underline;
+            color:lightblue;
+        }
+        .def-text {
+            font-weight:bold;
+            font-style:italic;
+            text-decoration: underline;
+        }
+    </style>
+{%endblock%}
+{%block body%}
         <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
             <h1 style="color:rgba(39,52,139,255)"> The Undergraduate Degree at UWA </h1>
             <p style="margin-top:20px; margin-left:150px; margin-right:150px; font-size:20px;"> Welcome to our guide on how to enrol at UWA! Whether you have recently graduated from high school, are switching universities, or joining us from overseas, you can look forward to a seamless and easy-to-access guide on enrolling at the best university in Western Australia! </p>
@@ -134,9 +87,9 @@
                             <ul>
                                 <li> The first major you pick will be your degree-specific major and must fall under the course or Bachelor that you are enrolling for. </li>
                                 <li style="margin-left:30px;"> For example if you were undertaking a Bachelor of Science, you could choose Data Science as your degree-specific major. </li>
-                                <li> If you would like to browse the large selection of majors and their units, feel free to browse the UWA undergraduate handbook at handbooks.uwa.edu.au</li>
+                                <li> If you would like to browse the large selection of majors and their units, feel free to browse the UWA undergraduate handbook at
+                                    <a href="https://handbooks.uwa.edu.au/" alt=UWAHandbooks target="_blank"> handbooks.uwa.edu.au </a></li>
                                 <li> <b> Please note:</b> if you are undertaking a second major, you do not need to complete the complementary units for that major, whereas it is necessary to complete ALL units (including complementary) for your degree-specific major. </li>
-                                <li> For the sake of this guide and as an example, let's say that we are studying Data Science as our degree-specific major, and only completing one major. </li>
                             </ul>
                         </div>
                     </div>
@@ -149,11 +102,11 @@
                         <div class="caro-text" style="margin-top:25px; font-size:16px;">
                             <p> Another aspect of enrolling in your degree is selecting your units. In this section we'll be going over the types of units that you'll be making up your degree with and the requirements of your course. </p>
                             <ol style="margin-top:15px;">
-                                <li> In order to finish your degree, you must satisfy the requirements of your course. The first requirement being that you complete all the core and complementarity units of your degree-specific major and/or the core units of your second major.</li>
+                                <li> In order to finish your degree, you must satisfy the requirements of your course. The first requirement being that you complete all the core and complementarity units of your degree-specific major and/or the core units (AT LEAST) of your second major.</li>
                                 <li> Achieve 144 credit points throughout the duration of your course. Most units will be worth 6 credit points, and in order to complete your course in 3 years, the load is 4 units per semester (full-time). </li>
-                                <li style="margin-left:30px;"> <b> Please note</b>: it is not mandatory to complete your course in 3 years, if you would like to extend one semester or one year, you may distribute your units throughout your degree in order to lighten your unit load per semester.  </li>
+                                <p style="list-style-type:circle; margin-left:30px;"> <b> Please note</b>: it is not mandatory to complete your course in 3 years, if you would like to extend one semester or one year, you may distribute your units throughout your degree in order to lighten your unit load per semester.  </p>
                                 <li> Complete at least four units (24 points) outside your degree specific major to satisfy the broadening requirement. </li>
-                                <li style="margin-left:30px;"> If you are doing a degree-specific major and a second major, or a degree-specific major and a minor, don't worry! The broadening requirement will most likely already be completed for you by choosing a second major/minor, as those units would count towards your broadening requirement.</li>
+                                <li style="list-style-type:circle; margin-left:30px;"> If you are doing a degree-specific major and a second major, or a degree-specific major and a minor, don't worry! The broadening requirement will most likely already be completed for you by choosing a second major/minor, as those units would count towards your broadening requirement.</li>
                             </ol> 
                         </div>
                     </div>
@@ -184,8 +137,8 @@
                             <p> Once you have chosen the majors, minors, broadening units and or electives that you wish to undertake, plan out the units in which you with to enrol using a study plan! Keep in mind that you can only enrol for one calendar year at a time, however you can plan out your entire degree in a study plan. </p>
                             <p> A study plan is a list of units you want to enrol in over the course of your degree - it may look like this: (Click on either to open a downloadable study plan pdf) </p>
                             <a href="https://handbooks.uwa.edu.au/docs/Course-Study-Plan-and-Checklist.pdf" target="_blank">
-                                <img src="Images/CourseStudyPlan1.png" alt="CoursePlan1" style="width:350px; height:250px; float:left;"> 
-                                <img src="Images/CourseStudyPlan2.png" alt="CoursePlan2" style="width:350px; height:250px; padding-left:5px;">
+                                <img src="{{ url_for('static', filename='Images/CourseStudyPlan1.png')}}" alt="CoursePlan1" style="width:350px; height:250px; float:left;"> 
+                                <img src="{{ url_for('static', filename='Images/CouresStudyPlan2.png')}}" alt="CoursePlan2" style="width:350px; height:250px; padding-left:5px;">
                             </a>
                         </div>
                     </div>
@@ -211,5 +164,6 @@
                 </script>
             </div>
         </div>
+{%endblock%}
     </body>
 </html>
