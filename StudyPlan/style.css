@@ -1,24 +1,86 @@
 body {
     margin: 0;
+    background-color: #333;
+    font-family: 'Roboto 300', sans-serif;
+}
+.side {
+    float: right;
+    height: auto;
+    width: 30%;
+}
+
+.main {
+    width: 58%;
+    height: 100px;
 }
 
 .container {
-    background-color: #333;
-    padding: 1rem;
+    display: table 4;
+    border: 5px solid black;
+    background-color: white;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     margin-top: 1rem;
 }
 
 .unit {
     text-align: center;
-    margin: 10px;
-    height: 150px;
+    vertical-align: middle;
+    line-height: 90px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    height: 90px;
     width: 150px;
     display: inline-block;
     background-color: white;
-    border:1px solid black;
+    border:3px solid black;
     cursor: move;
 }
 
 .unit.dragging {
     opacity: 0.5;
 }
+
+.invisible {
+    display: none;
+}
+
+.majors {
+    background-color: rgb(214, 182, 0);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* div to contain the dropdown elements */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Hidden div containing selectable majors */
+  .majorlist {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+  }
+  
+  /* Major links inside the list  */
+  .majorlist a {
+    color: black;
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Adds a slightly darker color to the hoevered major*/
+  .majorlist a:hover {background-color: #ddd;}
+  
+  /* On hover, will show the major list*/
+  .dropdown:hover .majorlist {display: block;}
+  
+  /* Changes color of containing div on hover*/
+  .dropdown:hover .majors {background-color:rgb(161, 137, 1);}

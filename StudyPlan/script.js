@@ -30,7 +30,6 @@ function getDragAfterElement(container, x) {
     return draggableElements.reduce((closest, child) => {
         const box = child.getBoundingClientRect()
         const offset = x - box.left - box.width / 2
-        console.log(offset);
         if (offset <0 && offset > closest.offset) {
             return { offset: offset, element: child}
         } else {
@@ -38,3 +37,4 @@ function getDragAfterElement(container, x) {
         }
     }, {offset: Number.NEGATIVE_INFINITY}).element
 }
+
