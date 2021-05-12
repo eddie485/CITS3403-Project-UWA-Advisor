@@ -5,8 +5,8 @@ from flask import render_template
 def login():
     return render_template("welcome-login.html")
 
-@app.route("/register")
-def register():
+@app.route("/registration")
+def registration():
     return render_template("welcome-registration.html")
 
 @app.route("/profile")
