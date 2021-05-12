@@ -5,10 +5,55 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="nav-style.css">
+        <link rel="stylesheet" type="text/css" href="Styles/nav-style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+        
+        .bg-image {
+        /* The image used */
+            background-image: url("https://www.studyoptions.com/sites/default/files/styles/mega_image/public/universities/university-western-australia/university-western-australia-uwagraduations1-3.jpg?itok=L1AbmyKO");
+  
+        /* Add the blur effect */
+             filter: blur(8px);
+            -webkit-filter: blur(8px);
+  
+        /* Full height */
+            height: 90%; 
+  
+        /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .verticalLine {
+            position: relative;
+            text-align: center;
+            background-color: black;
+            width: 2px;
+            top: -20px;
+            bottom: 0px;
+            left: 0%;
+        }
+        
+        </style>
     </head>
     <body>
         <header>
@@ -27,23 +72,83 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contents</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Undergrad</a>
-                            <a class="dropdown-item" href="">Updated Handbook</a>
-                            <a class="dropdown-item" href="">Changing Degrees</a>
-                            <a class="dropdown-item" href="">Posgrad</a>
+                            <a class="dropdown-item" href="contentUndergrad.html">Undergraduate</a>
+                            <a class="dropdown-item" href="contentEnrolment.html">Enrolment</a>
+                            <a class="dropdown-item" href="contentPostgrad.html">Postgraduate</a>
+                            <a class="dropdown-item" href="contentAddInfoAndDefinitions.html">Additional Information and Definitions</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Study Plan</a>
+                        <a class="nav-link" href="">Study plan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">Tests</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html">Profile</a>
+                        <a class="nav-link" href="">Profile</a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav>  
+        <div class="bg-image"></div>
+        <div class="bg-text">
+            <h1 >Welcome!</h1>
+                <h1 style="font-size:30px">UWA Enrolment Guide </h1>
+                <br>
+                <h5>We are dedicated to making your enrollment process easier.</h5>
+                <h5>By going through our detailed modules, you will be able to find out how to enroll in a few easy steps</h5>
+                <h5>We also have an additional study plan that you can generate to make your university experience organised and hassle free</h5>
+            </div>
+        <div class = "container">
+            <br>
+            <h3 class = "text-center">Top Resources to Consider</h3>
+            <h5 class= "text-center">Remember that each course is different, including the units. So it is best to see what are the course requirements</h5>
+            <br>
+            <div class = "row">
+                <div class = "col"> 
+                    <h5><strong style ="font-weight: 700;">Study Areas</strong></h5>
+                    <ul>
+                        <li><a href="https://www.uwa.edu.au/study/areas/agricultural-environmental-and-biological-sciences">Agricultural, Environmental and Biological Sciences</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/architecture-design-and-planning">Architeture, Design and Planning</a> </li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/business-and-commerce">Business and Commerce</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/data-and-computer-science">Data and Computer Science</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/education">Education</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/engineering">Engineering</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/health-and-biomedical-sciences">Health and Biomedical Sciences</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/humanities-and-social-sciences">Health and Social Sciences</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/law">Law</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/music-and-fine-arts">Music and Fine Arts</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/physical-sciences-and-mathematics">Physical Sciences and Mathematics</a></li>
+                        <li><a href="https://www.uwa.edu.au/study/areas/psychology">Psychology</a></li>
+                    </ul>
+                    <h5><strong>Get involved at University</strong></h5>
+                    <ul>
+                        <li><a href="uwastudentguild.com">UWA Student Guild</a></li>
+                        <li><a href="https://www.volunteering.guild.uwa.edu.au/">Guild Volunteering</a></li>
+                        <li><a href="https://www.sport.uwa.edu.au/gym-membership">Sports at UWA</a></li>
+                        <li><h5><strong>+ Many more...</strong></h5></li>
+                    </ul>
+                </div> 
+                <div class= "verticalLine"></div>
+                <div class= "col">
+                    <h5><strong style="font-weight: 700;">Find your Course</strong></h5>
+                    <p>To find your current courebook click here</p>
+                    <button onclick="document.location='https://www.uwa.edu.au/study/courses-and-careers/find-a-course'" class ='btn btn-outline-primary btn-lg btn-block'>Click Here</button>
+                    <br>
+                    <h5><strong>A Taste of Campus Culture</strong></h5>
+                    <iframe width="460" height="315" src="https://www.youtube.com/embed/4su16OuwdyQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                    <br>
+                    <br>               
+                </div>
+            </div>
+        </div>
+        <footer>
+            <img src = "https://micro.org.au/wp-content/uploads/2019/08/UWA_FacilityLogo_Black_2019.png" class= "img" alt = "UWA_FacilityLogo_Black_2019" height = "90">
+            <h5 style="text-align: left;"> CITS3403 > Home </h5>
+            <a href ="https://ipoint.uwa.edu.au/" class="nounderline"><span style = color:#e2b600>AskUWA</span></a>
+            <br>
+            <a href="https://www.uwa.edu.au/home" class="nounderline"><span style =color:#e2b600;>Official UWA Homepage</span></a>
+            <h5 style = "text-align: center;">UWA contact number:(+61) 8 6488 6000</h5>
+        </footer>     
     </body>
 </html>

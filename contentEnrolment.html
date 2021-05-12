@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title> Enrolling at UWA </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <!-- Importing bootstrap stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Importing navigation stylesheet that modifies bootstrap to fit UWA aesthetic -->
+        <link rel="stylesheet" type="text/css" href="Styles/nav-style.css">
+        <link rel="stylesheet" type="text/css" href="Styles/carouselstyle.css">
+        <!-- Importing important modules for bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            a {
+                text-decoration:underline;
+                color:lightblue;
+            }
+            .def-text {
+                font-weight:bold;
+                font-style:italic;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body> 
+        <header>
+            <h1 style="text-align: center;"> UWA Advisor </h1>
+        </header>
+        <nav class="navbar sticky-top navbar-expand-md">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="homePage.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contents</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="contentUndergrad.html">Undergraduate</a>
+                            <a class="dropdown-item" href="contentEnrolment.html">Enrolment</a>
+                            <a class="dropdown-item" href="contentPostgrad.html">Postgradraduate</a>
+                            <a class="dropdown-item" href="contentAddInfoAndDefinitions.html">Additional Information and Definitions</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Study Plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Tests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
+            <h1 style="color:rgba(39,52,139,255)"> Enrolling in Your First Undergraduate Degree </h1>
+            <p style="margin-top:20px; margin-left:150px; margin-right:150px; font-size:20px;"> Now that we've learnt all about course requirements, units and majors, let's enrol for our first undergraduate degree! </p>
+        </div>
+        <div class="progress my-2">
+            <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%;"> </div>
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-step="1">
+                    <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="First slide" >
+                    <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
+                    <div class="carousel-caption" style="color:white;">
+                        <h1 style="margin-top:10px;"> Enrolling on StudentConnect </h1>
+                        <div class="caro-text" style="margin-top:12px; font-size:16px;">
+                            <p> Now that we're all set up, the next step is to simply enrol in our course on UWA's online student hub, StudentConnect. </p>
+                            <p> Start by logging into the StudentConnect site which can be found 
+                                    <a href="https://www.uwa.edu.au/students" target="_blank"> here. </a></p>
+                            <ol>
+                                <li> Navigate to COURSE DETAILS > Online enrolment and click on "Begin online enrolment". </li>
+                                <li> Firstly, enter your nominated graduation year and completion period – for most people this would be 3 years (inclusive) from the time you begin your degree. For example, if you began your course in 2022, you would graduate at the end of 2024. </li>
+                                <li> Next, you may select your Unit Sets which relates to your major and second major. You will select your degree-specific major and your second degree major. </li>
+                                <li style="margin-bottom:5px;"> Now refer to your study plan that we made in the previous guide. You will now select your units. You can search up units according to their unit code – e.g., CITS1401. Once you have all the units selected for both semesters 1 and 2, then checkout and those units will now be selected as the first units of your course. Consider first year sorted! </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-step="2">
+                    <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Second slide">
+                    <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
+                    <div class="carousel-caption" style="color:white;">
+                        <h1 style="margin-top:10px;"> Class Allocation System </h1>
+                        <div class="caro-text" style="margin-top:25px; font-size:16px;">
+                            <p> Now all that is left is for you to sort out your University timetable on UWA’s class allocation system, also known as CAS. You can access CAS at cas.uwa.edu.au. You can select preferences up to four for which times you would like certain classes (tutorials, labs, workshops, etc.) to be allocated for you. Certain classes such as lectures are often not changeable. </p>
+                            <p> The Class Allocation System will look like the image below. Click on this image to be directed to the CAS UWA website. </p>
+                            <a href="https://www.cas.uwa.edu.au/" target="_blank">
+                                <img style="display:block; width:50%; height:255px; margin-right:auto; margin-left:auto;" src="Images/CASexampleimage.png" alt="CAS Example">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-step="3">
+                    <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Third slide">
+                    <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
+                    <div class="carousel-caption" style="color:white;">
+                        <h1 style="margin-top:10px;"> What's Next? </h1>
+                        <div class="caro-text" style="margin-top:25px;">
+                            <ul>
+                                <li> Congratulations! Now that you’ve finished enrolling at UWA, you can look into getting your own Campus Card! This can be done in-person from Student Central at UWA and the process begins online through studentconnect. </li>
+                                <li> Next, you have the freedom to access your very own student email which, as of 2020, is available on Microsoft Outlook and can also be accessed through studentconnect. </li>
+                                <li> Other things that you can now do involve making your own USI (Unique Student Identifier) and applying for the HECS-HELP loan scheme if you are a domestic student and wish to apply for governmental support for payment of your university course. You will need your tax-file number for this step and the setup is accessible once again through studentconnect. </li>
+                                <li> Finally, attend orientation! Before University begins in February each year, there is a week of orientation for new students to explore the campus, get involved with University Clubs and learn about their course. The key dates for orientation are available on the Unistart website
+                                    <a href="https://www.uwa.edu.au/unistart/orientation" target="_blank"> here. </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+                </a>
+                <script>
+                    var totalSlides = 3;
+                    $('#myCarousel').carousel();
+
+                    $('#myCarousel').on('slide.bs.carousel', function(progressMovement) {
+                    
+                    var numSlide = $(progressMovement.relatedTarget).data('step');
+                    var percent = (parseInt(numSlide) / totalSlides) * 100;
+                    $('.progress-bar').css({width: percent + '%'}); 
+                    })
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

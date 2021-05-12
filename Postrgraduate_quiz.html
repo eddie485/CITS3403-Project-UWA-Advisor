@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Postgraduate Quiz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="Styles/nav-style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style> 
+        .bg-image {
+        /* The image used */
+            background-image: url(https://images.adsttc.com/media/images/51c8/7384/b3fc/4b29/c100/011b/large_jpg/7_70_0391_UWA_N23_screenhdPortada.jpg?1372091259);
+  
+        /* Full height */
+            height: 90%; 
+  
+        /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 50%;
+            padding: 20px;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;">CITS3403</h1>
+        </header>
+        <nav class="navbar sticky-top navbar-expand-md">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contents</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="contentUndergrad.html">Undergraduate</a>
+                            <a class="dropdown-item" href="contentEnrolment.html">Enrolment</a>
+                            <a class="dropdown-item" href="contentPostgrad.html">Postgraduate</a>
+                            <a class="dropdown-item" href="contentAddInfoAndDefinitions.html">Additional Information and Definitions</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Study plan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Tests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class ="bg-image"></div>
+        <div class = "bg-text">
+            <h1>Postgraduate Quiz</h1>
+            <div class="quiz-container">
+                <div id="quiz"></div>
+            </div>
+            <button id="previous">Previous Question</button>
+            <button id="next">Next Question</button>
+            <button id="submit">Submit Quiz</button>
+            <div id="results"></div>
+            <script src="Scripts/quiz.js"></script>
+        </div>  
+    </body>
+</html>
