@@ -39,15 +39,23 @@ def homePage():
 
 @app.route("/quiz-homepage")
 def quizHome():
-    return render_template("quizHomepage.html")
+    return render_template("quizHome.html")
 
 @app.route("/quiz-undergrad")
 def quizUndergrad():
     return render_template("quizUndergrad.html")
 
-@app.route("/quiz-handbook")
-def quizHandbook():
-    return render_template("quizHandbook.html")
+@app.route("/quiz-postgrad")
+def quizPostgrad():
+    return render_template("quizPostgrad.html")
+
+@app.route("/quiz-definitions")
+def quizDefinitions():
+    return render_template("quizDefinitions.html")
+
+@app.route("/quiz-enrolment")
+def quizEnrolment():
+    return render_template("quizEnrolment.html")
 
 if __name__=="__main__":
     app.run(debug=True)
