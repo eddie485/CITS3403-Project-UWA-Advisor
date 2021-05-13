@@ -1,9 +1,14 @@
 from app import app
 from flask import render_template
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def login():
-    return render_template("welcome-login.html")
+    form = LoginForm()
+    if form.validate_on_submit():
+        flash('Login requested for user {}, remember_me={}'.format(
+            form.username.data, form.remember_me.data))
+        return redirect('/home')
+    return render_template("welcome-login.html", title="Sign in", form=form)
 
 @app.route("/registration")
 def registration():
