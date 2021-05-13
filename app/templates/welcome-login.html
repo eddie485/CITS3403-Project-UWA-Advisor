@@ -16,29 +16,31 @@
             <p id="msg" style="font-size: small; margin: 10px; text-align: center;"></p>
         </div>
         <!--hidden div called demo that is used for propmpt-->
-        <div class="mainContainer" id="mainForm" style="height:300px;">
+        <div class="mainContainer" id="mainForm" style="height:280px;">
             <h1>WELCOME</h1>
             <div>
-                <form>
+                <form action="" method="post">
                     <div class="inputContainer">
                         <i class="material-icons">account_circle</i>
-                        <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br>
+                        <input class="inputField" type="text" id="username" name="username" placeholder="Enter your username" value="{{ request.form.username }}"><br>
                     </div>
                     <div class="inputContainer">
                         <i class="material-icons">vpn_key</i>
-                        <input class="inputField" type="password" id="pass" name="pass" placeholder="Enter your password"><br>
+                        <input class="inputField" type="password" id="pass" name="pass" placeholder="Enter your password" value="{{ request.form.password }}"><br>
                     </div>
+                    <label style="float:left; padding-right: 40px;">Remember Me
+                        <input type="checkbox" style="display:inline; float:left"><br>
+                        <span class="checkmark"></span>
+                    </label>
+                    <button onclick="openPopup()" style="float: right; color: blue; background-color: transparent;">Forgot password?</button>
+                    <button class="button" type="submit" style="font-size: 15px;" value="Login">Log In</button>
                 </form>
+
+                {% if error %}
+                    <p class="error">Error!! It is:{{error}}
+                {%endif%}
             </div>
-            <div class="optionsContainer">
-                <label>Remember Me
-                    <input type="checkbox" style="display:inline; float:left"><br>
-                    <span class="checkmark"></span>
-                </label>
-                <button onclick="openPopup()" style="float: right; color: blue; background-color: transparent;">Forgot password?</button>
-            </div> 
             <div class="submitContainer">
-                <button class="button" style="font-size: 15px;" href="homePage.html">Log In</button>
                 <p>Don't have an account?</p>
                 <a href="/registration" style="color: blue;">Register here!</a>
             </div>

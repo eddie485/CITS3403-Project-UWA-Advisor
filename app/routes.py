@@ -1,58 +1,78 @@
 from app import app
-from flask import render_template
+from flask import render_template, request, redirect, url_for
 
 @app.route("/", methods=['GET', 'POST'])
 def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        flash('Login requested for user {}, remember_me={}'.format(
-            form.username.data, form.remember_me.data))
-        return redirect('/home')
-    return render_template("welcome-login.html", title="Sign in", form=form)
+
+    error = None 
+    if request.method == "POST":
+        if request.form["username"] != "admin" or request.form["pass"] != "adminpass":
+            error = "You do not have access or your credentials are wrong"
+        else:
+            return redirect(url_for("homePage"))
+
+    return render_template("welcome-login.html", title="Sign in", error=error)
 
 @app.route("/registration")
 def registration():
-    return render_template("welcome-registration.html")
+    return render_template("welcome-registration.html",  title="Create an Account")
 
 @app.route("/profile")
 def profile():
-    return render_template("profile.html", title="Profile")
-
-@app.route("/content-changing-degrees")
-def contentChangeDegree():
-    return render_template("")
+    return render_template("profile.html", title="Your Profile")
 
 @app.route("/content-definitions")
 def contentDefinitions():
-    return render_template("contentDefinitions.html")
+    return render_template("contentDefinitions.html", title="Additional Information and Definitions")
 
 @app.route("/content-enrolment")
 def contentEnrolment():
-    return render_template("contentEnrolment.html")
+    return render_template("contentEnrolment.html", title="Enrolling in Your First Undergraduate Degree")
 
 @app.route("/content-postgrad")
 def contentPostgrad():
-    return render_template("contentPostgrad.html")
+    return render_template("contentPostgrad.html", title="Postgraduate Degrees at UWA")
 
 @app.route("/content-undergrad")
 def contentUndergrad():
-    return render_template("contentUndergrad.html")
+    return render_template("contentUndergrad.html", title="The Undergraduate Degree at UWA")
 
 @app.route("/home-page")
 def homePage():
-    return render_template("homePage.html")
+    user = {"username": "Jack"}
+    return render_template("homePage.html", title="Home Page", user=user)
 
 @app.route("/quiz-homepage")
 def quizHome():
-    return render_template("quizHomepage.html")
+    return render_template("quizHome.html", title="Quiz Home")
 
 @app.route("/quiz-undergrad")
 def quizUndergrad():
-    return render_template("quizUndergrad.html")
+    return render_template("quizUndergrad.html", title="Undergraduate Quiz")
 
-@app.route("/quiz-handbook")
-def quizHandbook():
-    return render_template("quizHandbook.html")
+@app.route("/quiz-postgrad")
+def quizPostgrad():
+    return render_template("quizPostgrad.html", title="Postgraduate Quiz")
+
+@app.route("/quiz-definitions")
+def quizDefinitions():
+    return render_template("quizDefinitions.html", title="Definitions Quiz")
+
+@app.route("/quiz-enrolment")
+def quizEnrolment():
+    return render_template("quizEnrolment.html", title="Enrolment Quiz")
+
+@app.route("/study-plan")
+def studyPlan():
+    return render_template("studyPlan.html", title="Study Plan Builder")
+
+@app.route("/study-plan-DS")
+def studyPlanDS():
+    return render_template("studyPlanDS.html", title="Study Plan - Data Science")
+
+@app.route("/study-plan-FINA")
+def studyPlanFINA():
+    return render_template("studyPlanFINA.html", title="Study Plan - Finance")
 
 if __name__=="__main__":
     app.run(debug=True)

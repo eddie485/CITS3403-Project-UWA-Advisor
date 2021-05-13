@@ -1,5 +1,6 @@
 {%extends "base.html" %}
 {%block head%}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->   
     <style>
         a {
             text-decoration:underline;
@@ -138,7 +139,7 @@
                             <p> A study plan is a list of units you want to enrol in over the course of your degree - it may look like this: (Click on either to open a downloadable study plan pdf) </p>
                             <a href="https://handbooks.uwa.edu.au/docs/Course-Study-Plan-and-Checklist.pdf" target="_blank">
                                 <img src="{{ url_for('static', filename='Images/CourseStudyPlan1.png')}}" alt="CoursePlan1" style="width:350px; height:250px; float:left;"> 
-                                <img src="{{ url_for('static', filename='Images/CouresStudyPlan2.png')}}" alt="CoursePlan2" style="width:350px; height:250px; padding-left:5px;">
+                                <img src="{{ url_for('static', filename='Images/CourseStudyPlan2.png')}}" alt="CoursePlan2" style="width:350px; height:250px; padding-left:5px;">
                             </a>
                         </div>
                     </div>
