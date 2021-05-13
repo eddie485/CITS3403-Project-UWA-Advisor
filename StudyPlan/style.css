@@ -2,6 +2,8 @@ body {
     font-family: "TTNormsPro",Arial,sans-serif;
 }
 .side {
+    position: fixed;
+    right: 0;
     float: right;
     height: auto;
     width: 30%;
