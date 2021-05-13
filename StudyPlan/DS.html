@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js" defer></script>
+    <!-- Define a JS object which contains information about prerequisites. -->
     <script>
         const prereqs = {
         CITS2402:"CITS1401",
@@ -20,6 +21,7 @@
     <title>Data Science Study Plan</title>
 </head>
 <body>
+    <!-- Create dropdown menu for majors -->
     <div class="dropdown">
         <button class="majors">Choose a major:</button>
             <div class="majorlist">
@@ -27,6 +29,7 @@
                 <a href="Finance.html">Finance</a>
             </div>
     </div>
+    <!-- Container on the right which holds available draggable units to drop into planner, depending on major selected. -->
     <div class="side container"> Available Units: <br><br>
         <div class="unit Y1 nY S1 S2" draggable="true">CITS1401</div>
         <div class="unit Y1 nY nS S2" draggable="true">CITS1402</div>
@@ -41,6 +44,7 @@
         <div class="unit Y2 Y3 nS S2" draggable="true">STAT3064</div>
         <div class="unit Y2 Y3 S1 nS" draggable="true">STAT3405</div>
     </div>
+    <!-- Containers that units can be dropped into. -->
     <h1>Year 1</h1>
         <div class="Y1 S1">Semester 1
             <div class="main container">
