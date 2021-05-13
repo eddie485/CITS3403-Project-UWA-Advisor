@@ -54,6 +54,17 @@ def quizDefinitions():
 def quizEnrolment():
     return render_template("quizEnrolment.html", title="Enrolment Quiz")
 
+@app.route("/study-plan")
+def studyPlan():
+    return render_template("studyPlan.html", title="Study Plan Builder")
+
+@app.route("/study-plan-DS")
+def studyPlanDS():
+    return render_template("studyPlanDS.html", title="Study Plan - Data Science")
+
+@app.route("/study-plan-FINA")
+def studyPlanFINA():
+    return render_template("studyPlanFINA.html", title="Study Plan - Finance")
 
 if __name__=="__main__":
     app.run(debug=True)

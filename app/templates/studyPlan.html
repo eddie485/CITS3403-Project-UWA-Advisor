@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='Styles/studyPlanStyle.css')}}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='Scripts/studyPlanScript')}}" defer></script>
-    <title>Study Plan</title>
-</head>
-<body>
+{%extends "base.html" %}
+{%block head%}
+{%endblock%}
+{%block body%}
     <!-- Create dropdown menu for majors -->
     <div class="dropdown">
         <button class="majors">Choose a major:</button>
             <div class="majorlist">
-                <a href="studyPlanDS.html">Data Science</a>
-                <a href="studyPlanFINA.html">Finance</a>
+                <a href="/study-plan-DS">Data Science</a>
+                <a href="/study-plan-FINA">Finance</a>
             </div>
     </div>
     <!-- Container on the right which holds available draggable units to drop into planner, depending on major selected. -->
@@ -52,5 +44,6 @@
             <div class="main container">
             </div>
         </div>
+{%endblock%} 
 </body>
 </html>

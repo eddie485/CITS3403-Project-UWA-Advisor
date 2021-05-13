@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="studyPlanStyle.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="studyPlanScript.js" defer></script>
+{%extends "base.html" %}
+{%block head%}
+    <script src="{{ url_for('static', filename='Scripts/studyPlanScript.js')}}" defer></script>
     <!-- Define a JS object which contains information about prerequisites. -->
     <script>
         const prereqs = {
@@ -18,15 +12,14 @@
         STAT3405:"STAT2401"
         }
     </script>
-    <title>Data Science Study Plan</title>
-</head>
-<body>
+{%endblock%}
+{%block body%}
     <!-- Create dropdown menu for majors -->
     <div class="dropdown">
         <button class="majors">Choose a major:</button>
             <div class="majorlist">
-                <a href="studyPlanDS.html">Data Science</a>
-                <a href="studyPlanFinance.html">Finance</a>
+                <a href="/study-plan-DS">Data Science</a>
+                <a href="/study-plan-FINA">Finance</a>
             </div>
     </div>
     <!-- Container on the right which holds available draggable units to drop into planner, depending on major selected. -->
@@ -75,5 +68,6 @@
             <div class="main container">
             </div>
         </div>
+{%endblock%}
 </body>
 </html>

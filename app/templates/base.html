@@ -4,10 +4,12 @@
         <title>{{ title }}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/nav-style.css')}}"> <!--Stylesheet for the navbar-->
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/studyPlanStyle.css')}}"> <!-- Stylesheet for the study plan -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -37,7 +39,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Study Plan</a>
+                        <a class="nav-link" href="/study-plan">Study Plan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/quiz-homepage">Tests</a>
