@@ -1,17 +1,36 @@
 from app import app
-from flask import render_template, request, redirect, url_for
+from app.models import User
+from app.forms import LoginForm, RegistrationForm
+from flask import render_template, request, redirect, url_for, flash
+from flask_login import current_user, login_user, logout_user, login_required
 
 @app.route("/", methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash("Invalid username or password")
+            return redirect(url_for('/'))
+        login_user(user, remember=form.remember_me.data) 
+        return redirect(url_for('homePage'))
+    return render_template('welcome-login.html', title='Sign in', form=form)
 
-    error = None 
-    if request.method == "POST":
-        if request.form["username"] != "admin" or request.form["pass"] != "adminpass":
-            error = "You do not have access or your credentials are wrong"
-        else:
-            return redirect(url_for("homePage"))
+#    error = None 
+#    if request.method == "POST":
+#        if request.form["username"] != "admin" or request.form["pass"] != "adminpass":
+#            error = "You do not have access or your credentials are wrong"
+#        else:
+#         return redirect(url_for("homePage"))
 
-    return render_template("welcome-login.html", title="Sign in", error=error)
+#    return render_template("welcome-login.html", title="Sign in", error=error)
+
+@app.route("/logout") 
+def logout(): 
+    logout_user()
+    return redirect(url_for('welcome-login.html'))
 
 @app.route("/registration")
 def registration():
