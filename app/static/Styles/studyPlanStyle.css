@@ -1,4 +1,10 @@
+/* Indents over default stylesheet */
 h1 {
+  margin: 1rem;
+}
+
+/* Indents over default stylesheet */
+#semester {
   margin: 1rem;
 }
 
