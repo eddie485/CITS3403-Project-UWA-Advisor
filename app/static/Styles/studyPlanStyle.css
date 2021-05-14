@@ -1,5 +1,5 @@
-body {
-  font-family: "TTNormsPro",Arial,sans-serif;
+h1 {
+  margin: 1rem;
 }
 
 /* Keeps side container on the right and moves with scroll */
@@ -13,9 +13,10 @@ body {
 
 /* All the semester containers */
 .main {
-  float: left;
+  display: inline-block;
   width: 58%;
-  height: 100px;
+  height: 133px;
+  margin: 1rem;
 }
 
 /* Styling for every container */
@@ -50,7 +51,7 @@ body {
 
 /* Styling for dropdown majors menu item */
 .majors {
-  background-color: rgba(39,52,139,255);;
+  background-color: rgba(39,52,139,255);
   color: white;
   padding: 16px;
   font-size: 16px;
