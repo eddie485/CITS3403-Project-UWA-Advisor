@@ -1,88 +1,89 @@
 body {
-    font-family: "TTNormsPro",Arial,sans-serif;
+  font-family: "TTNormsPro",Arial,sans-serif;
 }
 
 /* Keeps side container on the right and moves with scroll */
 .side { 
-    position: fixed;
-    right: 0;
-    float: right;
-    height: auto;
-    width: 30%;
+  position: fixed;
+  right: 0;
+  float: right;
+  height: auto;
+  width: 30%;
 }
 
 /* All the semester containers */
 .main {
-    width: 58%;
-    height: 100px;
+  float: left;
+  width: 58%;
+  height: 100px;
 }
 
 /* Styling for every container */
 .container {
-    border: 5px solid black;
-    background-color: rgb(236,236,236);
-    padding-left: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-top: 1rem;
+  border: 5px solid black;
+  background-color: rgb(236,236,236);
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 /* Styling for the available units */
 .unit {
-    text-align: center;
-    vertical-align: middle;
-    line-height: 90px;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    height: 90px;
-    width: 150px;
-    display: inline-block;
-    background-color: white;
-    border:3px solid black;
-    cursor: move;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  height: 90px;
+  width: 150px;
+  display: inline-block;
+  background-color: white;
+  border:3px solid black;
+  cursor: move;
 }
 
 /* Makes the unit being dragged transparent */
 .unit.dragging {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /* Styling for dropdown majors menu item */
 .majors {
-    background-color: rgba(39,52,139,255);;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+  background-color: rgba(39,52,139,255);;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
   }
   
-  /* Styling for div that contain the dropdown elements */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+/* Styling for div that contain the dropdown elements */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
   
-  /* Makes the div that contains the majors invisible, and other styling*/
-  .majorlist {
-    display: none;
-    position: absolute;
-    background-color: rgb(222,184,42);
-    min-width: 160px;
-  }
+/* Makes the div that contains the majors invisible, and other styling*/
+.majorlist {
+  display: none;
+  position: absolute;
+  background-color: rgb(222,184,42);
+  min-width: 160px;
+}
   
-  /* Styling for links inside the menu*/
-  .majorlist a {
-    color: black;
-    padding: 1rem;
-    text-decoration: none;
-    display: block;
-  }
+/* Styling for links inside the menu*/
+.majorlist a {
+  color: black;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+}
   
-  /* Adds a slightly darker color to the hovered major*/
-  .majorlist a:hover {background-color: #ddd;}
-  
-  /* On hover, will show the major list*/
-  .dropdown:hover .majorlist {display: block;}
-  
-  /* Darkens color of containing div on hover*/
-  .dropdown:hover .majors {background-color:rgb(35,46,117);}
+/* Adds a slightly darker color to the hovered major*/
+.majorlist a:hover {background-color: #ddd;}
+
+/* On hover, will show the major list*/
+.dropdown:hover .majorlist {display: block;}
+
+/* Darkens color of containing div on hover*/
+.dropdown:hover .majors {background-color:rgb(35,46,117);}
