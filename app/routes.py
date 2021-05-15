@@ -81,6 +81,10 @@ def quizDefinitions():
 def quizEnrolment():
     return render_template("quizEnrolment.html", title="Enrolment Quiz")
 
+@app.route("/test-results")
+def quizResults():
+    return render_template("testResults.html", title="Tests Results")
+
 @app.route("/study-plan")
 def studyPlan():
     return render_template("studyPlan.html", title="Study Plan Builder")
