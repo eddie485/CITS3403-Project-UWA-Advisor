@@ -20,19 +20,30 @@
 <input class="inputField" type="password" id="pass" name="pass" placeholder="Enter your password" value="{{ request.form.password }}"><br>
 
 -->
+
 {% block content %}
         <div class="mainContainer" id="mainForm" style="height:320px;">
-            <h1 style="display:block; margin-left:auto; margin-right:auto;"> WELCOME</h1>
+            <h1 style="text-align:center; margin-right:16px;"> WELCOME </h1>
             <div>
                 <form action="" method="post" novalidate>
                     {{ form.hidden_tag() }}
                     <div class="inputContainer">
-                        <i class="material-icons" style="margin-right:10px;">account_circle</i>
-                         {{ form.username(size=32) }} <br>
+                        <i class="material-icons" style="margin-right:10px; width:30px; height:40px;">account_circle</i>
+                        <p>
+                            {{ form.username(size=32) }} <br>
+                            {% for error in form.username.errors %}
+                            <span style="color:red;"> [{{ error }} ] </span>
+                            {% endfor %}
+                        </p>
                     </div>
                     <div class="inputContainer">
-                        <i class="material-icons" style="margin-right:10px;">vpn_key</i>
-                        {{ form.password(size=32) }}
+                        <i class="material-icons" style="margin-right:10px; width:30px; height:40px;">vpn_key</i>
+                        <p>
+                            {{ form.password(size=32) }} <br>
+                            {% for error in form.password.errors %} 
+                            <span style="color:red;"> [{{ error }}] </span>
+                            {% endfor %} 
+                        </p>
                     </div>
                     <label style="position:absolute; right:670px; font-size:14px;"> Remember Me
                         {{ form.remember_me() }} </label>
