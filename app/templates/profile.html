@@ -44,12 +44,12 @@
                         <div class="card shadow-sm" style="height:365px">
                                 <div class="card-header bg-transparent text-center">
                                     <img class="profile-pic" src="https://i.pinimg.com/originals/13/16/c6/1316c631f23bc01d9b3b37e917edd9a8.jpg" alt="profile picture">
-                                    <h3 id="editable" contenteditable="false">Monkey D. Luffy</h3>
+                                    <h3 id="editable" contenteditable="false">{{ current_user.name }}</h3>
                                 </div>
                                 <div class="card-body">
-                                    <p class="mb-0"><strong class="pr-1">Student ID:</strong>23851174</p>
-                                    <p class="mb-0"><strong class="pr-1">Major:</strong>Finance</p>
-                                    <p class="mb-0"><strong class="pr-1">Year:</strong>2</p>
+                                    <p class="mb-0"><strong class="pr-1">Student ID:</strong>{{ current_user.studentid }}</p>
+                                    <p class="mb-0"><strong class="pr-1">Major:</strong>{{ current_user.major }}</p>
+                                    <p class="mb-0"><strong class="pr-1">Year:</strong>{{ current_user.year }}</p>
                                 </div>
                         </div>
                     </div>
@@ -57,26 +57,27 @@
                         <div class="card shadow-sm">
                             <div class="card-header bg-transparent border-0">
                                 <h3 class="mb-0">Account Details
-                                    <button class="material-icons edit-button" onclick="editFunction();">border_color</button>
+                                    <button class="material-icons edit-button" title="edit info" onclick="editFunction();" 
+                                    style="margin:auto; padding: 10px;">border_color</button>
                                 </h3>
                             </div>
                             <div class="card-body pt-0">
                                 <table class="table" style="color: whitesmoke">
                                     <tr>
                                         <th width="25%">Username</th>
-                                        <td id="editable" contenteditable="false">strawHat123</td>
+                                        <td>{{ current_user.username }}</td>
                                     </tr>
                                     <tr>
                                         <th width="25%">Email</th>
-                                        <td contenteditable="true" id="editable">kingOfPirates@onepiece.com</td>
+                                        <td>{{ current_user.email }}</td>
                                     </tr>
                                     <tr>
                                         <th width="25%">Date of Birth</th>
-                                        <td contenteditable="true" id="editable">05/05/1999</td>
+                                        <td>{{ current_user.dateofbirth }}</td>
                                     </tr>
                                     <tr>
                                         <th width="25%">Password</th>
-                                        <td contenteditable="true" id="editable">**********</td>
+                                        <td>{{ current_user.password }}</td>
                                     </tr>
                                 </table>
                             </div>

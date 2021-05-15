@@ -6,13 +6,15 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="{{ url_for('static', filename='Styles/welcome-style.css')}}">
         <title>UWA Enrolment and Studies Guide</title>
-    <style>
-        .material-icons {
-            margin-right:10px;
-            width:30px;
-            height:40px;
-        }
-    </style>
+        <style>
+            .material-icons {
+                margin-top: 15px;
+                margin-bottom: 15px;        
+            }
+            .inputContainer{
+                margin-left: 50px;
+            }
+        </style>
     </head>
     <body>
         <div id="topNav">
@@ -21,14 +23,14 @@
         </div>
 
 {% block content %} 
-        <div class="mainContainer" id="mainForm" style="margin-top:100px; width:615px;">
+        <div class="mainContainer" id="mainForm" style="margin-top:100px; width:450px;">
             <h1>Registration</h1>
             <form action="" method="post">
                 {{ form.hidden_tag() }}
                 <div class="inputContainer">
                     <i class="material-icons">email</i>
                     <p>
-                        {{ form.email(size=64) }} <br>
+                        {{ form.email(class="inputField", size=32, placeholder="Enter your email") }} <br>
                         {% for error in form.email.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %} 
@@ -38,7 +40,7 @@
                 <div class="inputContainer">
                     <i class="material-icons">text_format</i>
                     <p>
-                        {{ form.name(size=32) }} <br>
+                        {{ form.name(class="inputField", size=32, placeholder="Enter your given name and family name") }} <br>
                         {% for error in form.name.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %} 
@@ -46,19 +48,9 @@
                     </p>
                 </div>
                 <div class="inputContainer">
-                    <i class="material-icons">account_circle</i>
-                    <p>
-                        {{ form.username(size=32) }} <br>
-                        {% for error in form.username.errors %} 
-                        <span style="color:red;"> [{{ error }}] </span>
-                        {% endfor %} 
-                    <!-- <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br> -->
-                    </p>
-                </div>
-                <div class="inputContainer">
                     <i class="material-icons">date_range</i>
                     <p>
-                        {{ form.dateofbirth(size=32) }} <br>
+                        {{ form.dateofbirth(class="inputField", size=32, placeholder="Enter your date of birth", onfocus = "(this.type = 'date')", type="text") }} <br>
                         {% for error in form.dateofbirth.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %}
@@ -67,9 +59,49 @@
                     <!--onfocus="(this.type = 'date')" allows the placeholder to be seen before clicking-->
                 </div>
                 <div class="inputContainer">
+                    <i class="material-icons">menu_book</i>
+                    <p>
+                        {{ form.major(class="inputField", size=32, placeholder="Enter your major") }} <br>
+                        {% for error in form.name.errors %} 
+                        <span style="color:red;"> [{{ error }}] </span>
+                        {% endfor %} 
+                    <!-- <input class="inputField" type="text" id="fname" name="fname" placeholder="Enter your full name"><br> -->
+                    </p>
+                </div>
+                <div class="inputContainer">
+                    <i class="material-icons">tag</i>
+                    <p>
+                        {{ form.year(class="inputField", size=32, placeholder="Enter your current year of study") }} <br>
+                        {% for error in form.username.errors %} 
+                        <span style="color:red;"> [{{ error }}] </span>
+                        {% endfor %} 
+                    <!-- <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br> -->
+                    </p>
+                </div>
+                <div class="inputContainer">
+                    <i class="material-icons">badge</i>
+                    <p>
+                        {{ form.studentid(class="inputField", size=32, placeholder="Enter your student id") }} <br>
+                        {% for error in form.username.errors %} 
+                        <span style="color:red;"> [{{ error }}] </span>
+                        {% endfor %} 
+                    <!-- <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br> -->
+                    </p>
+                </div>
+                <div class="inputContainer">
+                    <i class="material-icons">account_circle</i>
+                    <p>
+                        {{ form.username(class="inputField", size=32, placeholder="Enter your username") }} <br>
+                        {% for error in form.username.errors %} 
+                        <span style="color:red;"> [{{ error }}] </span>
+                        {% endfor %} 
+                    <!-- <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br> -->
+                    </p>
+                </div>
+                <div class="inputContainer">
                     <i class="material-icons">password</i>
                     <p>
-                        {{ form.password(size=32) }} <br>
+                        {{ form.password(class="inputField", size=32, placeholder="Enter your password") }} <br>
                         {% for error in form.password.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %}
@@ -81,7 +113,7 @@
                 <div class="inputContainer">
                     <i class="material-icons">password</i>
                     <p>
-                        {{ form.password2(size=32) }} <br>
+                        {{ form.password2(class="inputField", size=32, placeholder="Enter your password again") }} <br>
                         {% for error in form.password2.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %}
@@ -89,7 +121,7 @@
                     </p>
                 </div>
                 <div class="submitContainer">
-                    <button class="button" style="font-size: 15px;" href="homePage.html"> {{ form.submit() }}</button>
+                    {{ form.submit(class="button", style="font-size: 15px;") }}
                 </div>
             </form>
         </div>

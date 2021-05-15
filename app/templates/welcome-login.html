@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='Styles/welcome-style.css')}}">
         <title>UWA Enrolment and Studies Guide</title>
         <style>
-            .material-icons {
-                margin-right:10px;
+            .material-icons{
+                margin: auto; 
             }
         </style>
     </head>
@@ -27,7 +27,7 @@
 -->
 
 {% block content %}
-        <div class="mainContainer" id="mainForm" style="height:375px;">
+        <div class="mainContainer" id="mainForm" style="height:335px;">
             <h1 style="text-align:center; margin-right:16px;"> WELCOME </h1>
             <div>
                 <form action="" method="post" novalidate>
@@ -35,7 +35,7 @@
                     <div class="inputContainer">
                         <i class="material-icons">account_circle</i>
                         <p>
-                            {{ form.username(size=32) }} <br>
+                            {{ form.username(class="inputField", size=32, placeholder="Enter your username") }} <br>
                             {% for error in form.username.errors %}
                             <span style="color:red;"> [{{ error }} ] </span>
                             {% endfor %}
@@ -44,22 +44,21 @@
                     <div class="inputContainer">
                         <i class="material-icons">vpn_key</i>
                         <p>
-                            {{ form.password(size=32) }} <br>
+                            {{ form.password(class="inputField", size=32, placeholder="Enter your password") }} <br>
                             {% for error in form.password.errors %} 
                             <span style="color:red;"> [{{ error }}] </span>
                             {% endfor %} 
                         </p>
                     </div>
-                    <label style="position:absolute; right:670px; font-size:14px;"> Remember Me
+                    <label style="margin-left: 20px; right:670px; padding-right:23px; font-size:14px;"> Remember Me
                         {{ form.remember_me() }} </label>
                         <span class="checkmark"></span>
                     </label>
 
-                    <button onclick="openPopup()" style="position:relative; margin-left:15px; color:rgba(226,182,0,255); background-color: transparent;">
+                    <button onclick="openPopup()" style="float:right; margin-right: 15px; color:rgba(226,182,0,255); background-color: transparent;">
                         Forgot password?</button>
 
-                    <button class="button" type="submit" style="display:block; margin-left:auto; margin-right:auto; margin-top:10px;" value="Login">
-                         {{ form.submit() }} </button>
+                    {{ form.submit(class="button", style="display:block; margin-left:auto; margin-right:auto; margin-top:10px;") }} 
                 </form>
 
                 {% if error %}

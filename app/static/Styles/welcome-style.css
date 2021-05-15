@@ -41,11 +41,10 @@ body{
 .inputContainer{
     display: flex;
     width: 85%;
-    margin-bottom: 15px;
     margin-left: 25px;
 }
 .inputField{
-    width: 100%;
+    width: 90%;
     padding: 10px;
     outline: none;
     border-radius: 5px;
