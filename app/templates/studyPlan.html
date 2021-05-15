@@ -1,0 +1,55 @@
+{%extends "base.html" %}
+{%block head%}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/studyPlanStyle.css')}}"> <!-- Stylesheet for the study plan -->
+{%endblock%}
+{%block body%}
+    <!-- Create dropdown menu for majors -->
+    <div class="dropdown">
+        <button class="majors">Choose a major:</button>
+            <div class="majorlist">
+                <a href="/study-plan-DS">Data Science</a>
+                <a href="/study-plan-FINA">Finance</a>
+            </div>
+    </div>
+    <!-- Container on the right which holds available draggable units to drop into planner, depending on major selected. -->
+    <div class="side container"> Available Units: <br><br>
+    </div>
+    <div id="description">
+        Choose a major using the button above!
+    </div>
+    <!-- Containers that units can be dropped into. -->
+    <h1>Year 1</h1>
+        <div class="Y1 S1" id="semester">Semester 1 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+        <div class="Y1 S2" id="semester">Semester 2 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+    <h1>Year 2</h1>
+        <div class="Y2 S1" id="semester">Semester 1 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+        <div class="Y2 S2" id="semester">Semester 2 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+    <h1>Year 3</h1>
+        <div class="Y3 S1" id="semester">Semester 1 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+        <div class="Y3 S2" id="semester">Semester 2 <br>
+            <div class="main container">
+            </div>
+        </div>
+{%endblock%} 
+</body>
+</html>

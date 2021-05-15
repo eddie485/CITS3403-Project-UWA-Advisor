@@ -1,0 +1,88 @@
+{%extends "base.html" %}
+{%block head%}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/studyPlanStyle.css')}}"> <!-- Stylesheet for the study plan -->
+    <script src="{{ url_for('static', filename='Scripts/studyPlanScript.js')}}" defer></script>
+    <!-- Define a JS object which contains information about prerequisites. -->
+    <script>
+        const prereqs = {
+        FINA2222:"FINA1221",
+        FINA2204:"FINA1221",
+        FINA2205:"FINA1221",
+        FINA2207:"FINA1221",
+        FINA2209:"FINA1221",
+        FINA3324:"FINA2222",
+        ECON3236:"FINA2222",
+        FINA3304:"FINA2222",
+        FINA3306:"FINA2204",
+        FINA3307:"FINA2222",
+        FINA3326:"FINA2222",
+        }
+    </script>
+{%endblock%}
+{%block body%}
+    <!-- Create dropdown menu for majors -->
+    <div class="dropdown">
+        <button class="majors">Choose a major:</button>
+            <div class="majorlist">
+                <a href="/study-plan-DS">Data Science</a>
+                <a href="/study-plan-FINA">Finance</a>
+            </div>
+    </div>
+    <!-- Container on the right which holds available draggable units to drop into planner, depending on major selected. -->
+    <div class="side container"> 
+        <a href="https://handbooks.uwa.edu.au/majordetails?code=MJD-fince" style="font-size: larger;" target="_blank"> Finance Handbook </a><br>
+        <div> Available Units: </div><br>
+        <div class="unit Y1 nY S1 S2" draggable="true">ACCT1101</div>
+        <div class="unit Y1 nY S1 S2" draggable="true">FINA1221</div>
+        <div class="unit Y1 Y2 S1 S2" draggable="true">FINA2222</div>
+        <div class="unit Y1 Y2 S1 nS" draggable="true">FINA2204</div>
+        <div class="unit Y1 Y2 S1 nS" draggable="true">FINA2205</div>
+        <div class="unit Y1 Y2 S1 nS" draggable="true">FINA2207</div>
+        <div class="unit Y1 Y2 nS S2" draggable="true">FINA2209</div>
+        <div class="unit Y2 Y3 S1 nS" draggable="true">FINA3324</div>
+        <div class="unit Y2 Y3 S1 nS" draggable="true">ECON3236</div>
+        <div class="unit Y2 Y3 S1 nS" draggable="true">FINA3304</div>
+        <div class="unit Y2 Y3 S1 S2" draggable="true">FINA3306</div>
+        <div class="unit Y2 Y3 nS S2" draggable="true">FINA3307</div>
+        <div class="unit Y2 Y3 nS S2" draggable="true">FINA3326</div>
+    </div>
+    <div id="description">
+        Drag and drop the following finance units to make your study plan! <br>
+        Units can only be dragged in if prerequisites have been met, and if it is available in that semester. Check the handbook for prerequisite details.
+    </div>
+    <!-- Containers that units can be dropped into. -->
+    <h1>Year 1</h1>
+        <div class="Y1 S1" id="semester">Semester 1 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+        <div class="Y1 S2" id="semester">Semester 2 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+    <h1>Year 2</h1>
+        <div class="Y2 S1" id="semester">Semester 1 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+        <div class="Y2 S2" id="semester">Semester 2 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+    <h1>Year 3</h1>
+        <div class="Y3 S1" id="semester">Semester 1 <br>
+            <div class="main container">
+            </div>
+        </div>
+        <br>
+        <div class="Y3 S2" id="semester">Semester 2 <br>
+            <div class="main container">
+            </div>
+        </div>
+{%endblock%}
+</body>
+</html>
