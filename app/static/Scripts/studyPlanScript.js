@@ -64,3 +64,14 @@ function getDragAfterElement(container, x) {                                    
     }, {offset: Number.NEGATIVE_INFINITY}).element;                                      // Sets an arbitrary base amount for offset
 }
 
+
+$(document).scroll(function() {
+stopScroll();                                                                           // Script to maintain side container doesn't scroll into footer
+});
+
+function stopScroll() {
+    if($('.side').offset().top + $('.side').height() >= $('footer').offset().top) {     // Takes offsets of each container (side and footer), and changes the position CSS element to either absolute or fixed)
+        $('.side').css('position', 'absolute')};
+    if($(document).scrollTop() + window.innerHeight < $('footer').offset().top){
+        $('.side').css('position', 'fixed')}; 
+}
