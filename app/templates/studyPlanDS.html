@@ -24,7 +24,9 @@
             </div>
     </div>
     <!-- Container on the right which holds available draggable units to drop into planner, depending on major selected. -->
-    <div class="side container"> Available Units: <br><br>
+    <div class="side container">
+        <a href="https://handbooks.uwa.edu.au/majordetails?code=MJD-DATSC" style="font-size: larger;" target="_blank"> Data Science Handbook </a><br>
+        <div> Available Units: </div><br>
         <div class="unit Y1 nY S1 S2" draggable="true">CITS1401</div>
         <div class="unit Y1 nY nS S2" draggable="true">CITS1402</div>
         <div class="unit Y1 nY S1 nS" draggable="true">PHIL1001</div>
@@ -38,6 +40,11 @@
         <div class="unit Y2 Y3 nS S2" draggable="true">STAT3064</div>
         <div class="unit Y2 Y3 S1 nS" draggable="true">STAT3405</div>
     </div>
+    <div id="description">
+        Drag and drop the following data science units to make your study plan! <br>
+        Units can only be dragged in if prerequisites have been met, and if it is available in that semester. Check the handbook for prerequisite details.
+    </div>
+
     <!-- Containers that units can be dropped into. -->
     <h1>Year 1</h1>
         <div class="Y1 S1" id="semester">Semester 1 <br>

@@ -8,6 +8,12 @@ h1 {
   margin: 1rem;
 }
 
+#description {
+  font-size: x-large;
+  margin: 1rem;
+  width: 68%
+}
+
 /* Keeps side container on the right and moves with scroll */
 .side { 
   position: fixed;
@@ -62,6 +68,10 @@ h1 {
   padding: 16px;
   font-size: 16px;
   border: none;
+  margin-bottom: 0px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  display: inline-block;
   }
   
 /* Styling for div that contain the dropdown elements */
@@ -72,22 +82,23 @@ h1 {
   
 /* Makes the div that contains the majors invisible, and other styling*/
 .majorlist {
+  margin-left: 1rem;
   display: none;
   position: absolute;
   background-color: rgb(222,184,42);
-  min-width: 160px;
+  min-width: inherit;
 }
   
 /* Styling for links inside the menu*/
 .majorlist a {
   color: black;
-  padding: 1rem;
+  padding: 1rem 1rem;
   text-decoration: none;
   display: block;
 }
   
 /* Adds a slightly darker color to the hovered major*/
-.majorlist a:hover {background-color: #ddd;}
+.majorlist a:hover {background-color: rgb(167, 135, 21);}
 
 /* On hover, will show the major list*/
 .dropdown:hover .majorlist {display: block;}
