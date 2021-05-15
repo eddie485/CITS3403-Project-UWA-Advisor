@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="{{ url_for('static', filename='Styles/welcome-style.css')}}">
         <title>UWA Enrolment and Studies Guide</title>
+        <style>
+            .material-icons {
+                margin-right:10px;
+            }
+        </style>
     </head>
     <body>
         <div id="topNav">
@@ -22,13 +27,13 @@
 -->
 
 {% block content %}
-        <div class="mainContainer" id="mainForm" style="height:320px;">
+        <div class="mainContainer" id="mainForm" style="height:375px;">
             <h1 style="text-align:center; margin-right:16px;"> WELCOME </h1>
             <div>
                 <form action="" method="post" novalidate>
                     {{ form.hidden_tag() }}
                     <div class="inputContainer">
-                        <i class="material-icons" style="margin-right:10px; width:30px; height:40px;">account_circle</i>
+                        <i class="material-icons">account_circle</i>
                         <p>
                             {{ form.username(size=32) }} <br>
                             {% for error in form.username.errors %}
@@ -37,7 +42,7 @@
                         </p>
                     </div>
                     <div class="inputContainer">
-                        <i class="material-icons" style="margin-right:10px; width:30px; height:40px;">vpn_key</i>
+                        <i class="material-icons">vpn_key</i>
                         <p>
                             {{ form.password(size=32) }} <br>
                             {% for error in form.password.errors %} 

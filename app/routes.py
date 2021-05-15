@@ -1,6 +1,6 @@
-from app import app
+from app import app, db
 from app.models import User
-from app.forms import LoginForm
+from app.forms import LoginForm, RegistrationForm
 from flask import render_template, request, redirect, url_for, flash
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
@@ -37,9 +37,19 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-@app.route("/registration")
+@app.route("/registration", methods=["GET", "POST"])
 def registration():
-    return render_template("welcome-registration.html",  title="Create an Account")
+    if current_user.is_authenticated:
+        return redirect(url_for("homePage"))
+    form = RegistrationForm()
+    if form.validate_on_submit(): 
+        user = User(username=form.username.data, email=form.email.data, name=form.name.data, dateofbirth=form.dateofbirth.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash("Congratulations! You are not registered with UWA Advisor") 
+        return redirect(url_for("login"))
+    return render_template("welcome-registration.html",  title="Create an Account", form=form)
 
 @app.route("/profile")
 @login_required
