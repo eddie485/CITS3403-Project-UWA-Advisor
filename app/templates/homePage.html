@@ -43,12 +43,20 @@
             bottom: 0px;
             left: 0%;
         } 
+
+        .underline {
+        text-decoration: underline;
+        }
+
         </style>
 {%endblock%}
 {%block body%}
         <div class="bg-image"></div>
         <div class="bg-text">
-            <h1 >Welcome {{ user.username }}!</h1>
+        
+        {% block content %} 
+            <h1 >Welcome {{ current_user.username }}!</h1>
+        {% endblock %}
                 <h1 style="font-size:30px">UWA Enrolment Guide </h1>
                 <br>
                 <h5>We are dedicated to making your enrollment process easier.</h5>
@@ -64,24 +72,24 @@
                 <div class = "col"> 
                     <h5><strong style ="font-weight: 700;">Study Areas</strong></h5>
                     <ul>
-                        <li><a href="https://www.uwa.edu.au/study/areas/agricultural-environmental-and-biological-sciences">Agricultural, Environmental and Biological Sciences</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/architecture-design-and-planning">Architeture, Design and Planning</a> </li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/business-and-commerce">Business and Commerce</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/data-and-computer-science">Data and Computer Science</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/education">Education</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/engineering">Engineering</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/health-and-biomedical-sciences">Health and Biomedical Sciences</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/humanities-and-social-sciences">Health and Social Sciences</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/law">Law</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/music-and-fine-arts">Music and Fine Arts</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/physical-sciences-and-mathematics">Physical Sciences and Mathematics</a></li>
-                        <li><a href="https://www.uwa.edu.au/study/areas/psychology">Psychology</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/agricultural-environmental-and-biological-sciences">Agricultural, Environmental and Biological Sciences</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/architecture-design-and-planning">Architeture, Design and Planning</a> </li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/business-and-commerce">Business and Commerce</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/data-and-computer-science">Data and Computer Science</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/education">Education</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/engineering">Engineering</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/health-and-biomedical-sciences">Health and Biomedical Sciences</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/humanities-and-social-sciences">Health and Social Sciences</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/law">Law</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/music-and-fine-arts">Music and Fine Arts</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/physical-sciences-and-mathematics">Physical Sciences and Mathematics</a></li>
+                        <li class = "underline"><a href="https://www.uwa.edu.au/study/areas/psychology">Psychology</a></li>
                     </ul>
                     <h5><strong>Get involved at University</strong></h5>
                     <ul>
-                        <li><a href="uwastudentguild.com">UWA Student Guild</a></li>
-                        <li><a href="https://www.volunteering.guild.uwa.edu.au/">Guild Volunteering</a></li>
-                        <li><a href="https://www.sport.uwa.edu.au/gym-membership">Sports at UWA</a></li>
+                        <li class = "underline"><a href="uwastudentguild.com">UWA Student Guild</a></li>
+                        <li class = "underline"><a href="https://www.volunteering.guild.uwa.edu.au/">Guild Volunteering</a></li>
+                        <li class = "underline"><a href="https://www.sport.uwa.edu.au/gym-membership">Sports at UWA</a></li>
                         <li><h5><strong>+ Many more...</strong></h5></li>
                     </ul>
                 </div> 
