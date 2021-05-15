@@ -1,5 +1,17 @@
-body {
-  font-family: "TTNormsPro",Arial,sans-serif;
+/* Indents over default stylesheet */
+h1 {
+  margin: 1rem;
+}
+
+/* Indents over default stylesheet */
+#semester {
+  margin: 1rem;
+}
+
+#description {
+  font-size: x-large;
+  margin: 1rem;
+  width: 68%
 }
 
 /* Keeps side container on the right and moves with scroll */
@@ -13,9 +25,10 @@ body {
 
 /* All the semester containers */
 .main {
-  float: left;
+  display: inline-block;
   width: 58%;
-  height: 100px;
+  height: 133px;
+  margin: 1rem;
 }
 
 /* Styling for every container */
@@ -50,11 +63,15 @@ body {
 
 /* Styling for dropdown majors menu item */
 .majors {
-  background-color: rgba(39,52,139,255);;
+  background-color: rgba(39,52,139,255);
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
+  margin-bottom: 0px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  display: inline-block;
   }
   
 /* Styling for div that contain the dropdown elements */
@@ -65,22 +82,23 @@ body {
   
 /* Makes the div that contains the majors invisible, and other styling*/
 .majorlist {
+  margin-left: 1rem;
   display: none;
   position: absolute;
   background-color: rgb(222,184,42);
-  min-width: 160px;
+  min-width: inherit;
 }
   
 /* Styling for links inside the menu*/
 .majorlist a {
   color: black;
-  padding: 1rem;
+  padding: 1rem 1rem;
   text-decoration: none;
   display: block;
 }
   
 /* Adds a slightly darker color to the hovered major*/
-.majorlist a:hover {background-color: #ddd;}
+.majorlist a:hover {background-color: rgb(167, 135, 21);}
 
 /* On hover, will show the major list*/
 .dropdown:hover .majorlist {display: block;}
