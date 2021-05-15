@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="{{ url_for('static', filename='Styles/welcome-style.css')}}">
         <title>UWA Enrolment and Studies Guide</title>
+        <style>
+            .material-icons {
+                margin-right:10px;
+            }
+        </style>
     </head>
     <body>
         <div id="topNav">
@@ -15,36 +20,60 @@
         <div class=mainContainer style="height: 50px; margin-top: 50px; display:none" id="hidden">
             <p id="msg" style="font-size: small; margin: 10px; text-align: center;"></p>
         </div>
-        <!--hidden div called demo that is used for propmpt-->
-        <div class="mainContainer" id="mainForm" style="height:280px;">
-            <h1>WELCOME</h1>
+
+<!-- <input class="inputField" type="text" id="username" name="username" placeholder="Enter your username" value="{{ request.form.username }}"><br>
+<input class="inputField" type="password" id="pass" name="pass" placeholder="Enter your password" value="{{ request.form.password }}"><br>
+
+-->
+
+{% block content %}
+        <div class="mainContainer" id="mainForm" style="height:375px;">
+            <h1 style="text-align:center; margin-right:16px;"> WELCOME </h1>
             <div>
-                <form action="" method="post">
+                <form action="" method="post" novalidate>
+                    {{ form.hidden_tag() }}
                     <div class="inputContainer">
                         <i class="material-icons">account_circle</i>
-                        <input class="inputField" type="text" id="username" name="username" placeholder="Enter your username" value="{{ request.form.username }}"><br>
+                        <p>
+                            {{ form.username(size=32) }} <br>
+                            {% for error in form.username.errors %}
+                            <span style="color:red;"> [{{ error }} ] </span>
+                            {% endfor %}
+                        </p>
                     </div>
                     <div class="inputContainer">
                         <i class="material-icons">vpn_key</i>
-                        <input class="inputField" type="password" id="pass" name="pass" placeholder="Enter your password" value="{{ request.form.password }}"><br>
+                        <p>
+                            {{ form.password(size=32) }} <br>
+                            {% for error in form.password.errors %} 
+                            <span style="color:red;"> [{{ error }}] </span>
+                            {% endfor %} 
+                        </p>
                     </div>
-                    <label style="float:left; padding-right: 40px;">Remember Me
-                        <input type="checkbox" style="display:inline; float:left"><br>
+                    <label style="position:absolute; right:670px; font-size:14px;"> Remember Me
+                        {{ form.remember_me() }} </label>
                         <span class="checkmark"></span>
                     </label>
-                    <button onclick="openPopup()" style="float: right; color: blue; background-color: transparent;">Forgot password?</button>
-                    <button class="button" type="submit" style="font-size: 15px;" value="Login">Log In</button>
+
+                    <button onclick="openPopup()" style="position:relative; margin-left:15px; color:rgba(226,182,0,255); background-color: transparent;">
+                        Forgot password?</button>
+
+                    <button class="button" type="submit" style="display:block; margin-left:auto; margin-right:auto; margin-top:10px;" value="Login">
+                         {{ form.submit() }} </button>
                 </form>
 
                 {% if error %}
-                    <p class="error">Error!! It is:{{error}}
+                    <p class="error">Error: {{error}}
                 {%endif%}
             </div>
             <div class="submitContainer">
                 <p>Don't have an account?</p>
-                <a href="/registration" style="color: blue;">Register here!</a>
+                <a href="{{ url_for('registration') }}" style="color:rgba(226,182,0,255);">Register here!</a>
             </div>
         </div>
+
+{% endblock %}
+
         <script>
             function openPopup() {
                 var txt;
@@ -60,5 +89,6 @@
                 reveal.style.display="block";
             }
         </script>
+
     </body>
 </html>
