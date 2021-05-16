@@ -1,29 +1,44 @@
 {%extends "base.html" %}
 {%block head%}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->
+    <!--Stylesheet for the carousel-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}">
 {%endblock%}
 {%block body%}
+
+        <!--The following div creates the top of the page which contains a header and a short description of what the following tutorial section contains.-->
         <div class="center content-headings">
             <h1 class="content-section-title"> Enrolling in Your First Undergraduate Degree </h1>
             <p class="content-section-text"> Now that we've learnt all about course requirements, units and majors, let's enrol for our first undergraduate degree! </p>
         </div>
+
+        <!--Creates the progress bar at the top of the page which tracks the user's progress in the carousel-->
         <div class="progress my-2">
             <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%;"> </div>
         </div>
+
+        <!--Initialises Bootstrap carousel, creates buttons at bottom of each carousel which navigate to a certain slide which clicked.-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#myCarousel" data-slide-to="1"></li>
               <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
+
+            <!--As a disclaimer, all font-sizes are set to "vw" units in order to allow the text to adjust to changes in browser-window size.-->
+            <!--The below div holds all the content in all carousel slides.-->
             <div class="carousel-inner">
+                <!--The below div holds all the content in one specific carousel slide. data-step is set to the slide number for the progress bar.-->
                 <div class="carousel-item active" data-step="1">
-                    <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="First slide" >
+                    <!--All background images are identical (to maintain consistency) and are sourced from The University of Western Australia-->
+                    <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="First slide">
+                    <!--The following image acts as a "canvas" for the text for each slide. Sourced from colorhexa.com, and is a solid colour image of the UWA blue.-->
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
+                    <!--The below code is the actual content of each slide, with a title (heading) and the text which is presented in paragraphs and dot points.-->
                     <div class="carousel-caption">
                         <h1> Enrolling on StudentConnect </h1>
                         <div class="caro-text first-slide-spacer">
                             <p> Now that we're all set up, the next step is to simply enrol in our course on UWA's online student hub, StudentConnect. </p>
+                            <!--Direct link to UWA's student portal studentconnect-->
                             <p> Start by logging into the StudentConnect site which can be found 
                                     <a href="https://www.uwa.edu.au/students" target="_blank"> here. </a></p>
                             <ol>
@@ -35,6 +50,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!--Next slide, and so forth.-->
                 <div class="carousel-item" data-step="2">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Second slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
@@ -43,12 +60,15 @@
                         <div class="caro-text general-slide-spacer" style="font-size:0.95vw;">
                             <p> Now all that is left is for you to sort out your University timetable on UWA’s class allocation system, also known as CAS. You can access CAS at cas.uwa.edu.au. You can select preferences up to four for which times you would like certain classes (tutorials, labs, workshops, etc.) to be allocated for you. Certain classes such as lectures are often not changeable. </p>
                             <p> The Class Allocation System will look like the image below. Click on this image to be directed to the CAS UWA website. </p>
+                            <!--Direct link to UWA's class allocation system-->
                             <a href="https://www.cas.uwa.edu.au/" target="_blank">
+                                <!--Image showing CAS website layout as an example, sourced directly as a screenshot from UWA's CAS website.-->
                                 <img style="display:block; width:60%; margin-right:auto; margin-left:auto; margin-top:20px;" src="{{ url_for('static', filename='Images/CASexampleimage.png')}}" alt="CAS Example">
                             </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item" data-step="3">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Third slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
@@ -64,10 +84,13 @@
                                 </li>
                             </ul>
                         </div>
+                        <!--Buttons at the end of each carousel slideshow to proceed to next section or go back to a previous section.-->
                         <a href="{{ url_for('contentPostgrad') }}" class="buttontonext"> Click here to learn about Postgraduate degrees at UWA </a> <br>
                         <a href="{{ url_for('contentUndergrad') }}" class="buttontonext"> Click here to go back to the Undergraduate degree </a>
                     </div>
                 </div>
+
+                <!--Creating buttons on sides of carousel slides to navigate "next slide" and "previous slide"-->
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -76,13 +99,19 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
                 </a>
+
+                <!--Javascript to code for progress bar.-->
                 <script>
+                    // variable totalSlies is set to the total number of slides in the given carousel.
                     var totalSlides = 3;
+                    // Pulling id "myCarousel" from the HTML.
                     $('#myCarousel').carousel();
 
+                    //Defining a function "progressMovement" to move progress bar according to numSlide (data-step defines slide number).
                     $('#myCarousel').on('slide.bs.carousel', function(progressMovement) {
-                    
                     var numSlide = $(progressMovement.relatedTarget).data('step');
+
+                    //Percent that progress bar moves to is calculated with following formula using slide number and then applied to css.
                     var percent = (parseInt(numSlide) / totalSlides) * 100;
                     $('.progress-bar').css({width: percent + '%'}); 
                     })
