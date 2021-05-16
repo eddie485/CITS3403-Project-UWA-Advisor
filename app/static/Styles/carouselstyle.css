@@ -36,7 +36,7 @@
     opacity: 90%;
     position:absolute;
     width: 48%;
-    height:550px;
+    height:570px;
     margin:auto;
     top:25%;
     bottom: 30%;
@@ -78,4 +78,30 @@ li {
     white-space:nowrap;
     background-color:#27348b;
     transition:width .6s
+}
+a {
+    text-decoration:underline;
+    color:lightblue;
+}
+.def-text {
+    font-weight:bold;
+    font-style:italic;
+    text-decoration: underline;
+}
+a.buttontonext {
+    font-family: "TTNormsPro",Arial,sans-serif;
+    font-size: 22px;
+    background-color:#e2b600;
+    color: rgba(39,52,139,255);
+    padding: 5px 10px 5px;
+    border-radius: 4px;
+    width:70%; 
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+.buttontonext:hover {
+    background-color: rgba(39,52,139,255);
+    color: #e2b600;
+    text-decoration: none;
 }

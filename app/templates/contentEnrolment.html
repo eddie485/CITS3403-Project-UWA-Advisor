@@ -1,17 +1,6 @@
 {%extends "base.html" %}
 {%block head%}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->
-    <style>
-        a {
-            text-decoration:underline;
-            color:lightblue;
-        }
-        .def-text {
-            font-weight:bold;
-            font-style:italic;
-            text-decoration: underline;
-        }
-    </style>
 {%endblock%}
 {%block body%}
         <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
@@ -66,7 +55,7 @@
                     <div class="carousel-caption" style="color:white;">
                         <h1 style="margin-top:10px;"> What's Next? </h1>
                         <div class="caro-text" style="margin-top:25px;">
-                            <ul>
+                            <ul style="margin-bottom:30px;">
                                 <li> Congratulations! Now that you’ve finished enrolling at UWA, you can look into getting your own Campus Card! This can be done in-person from Student Central at UWA and the process begins online through studentconnect. </li>
                                 <li> Next, you have the freedom to access your very own student email which, as of 2020, is available on Microsoft Outlook and can also be accessed through studentconnect. </li>
                                 <li> Other things that you can now do involve making your own USI (Unique Student Identifier) and applying for the HECS-HELP loan scheme if you are a domestic student and wish to apply for governmental support for payment of your university course. You will need your tax-file number for this step and the setup is accessible once again through studentconnect. </li>
@@ -75,6 +64,8 @@
                                 </li>
                             </ul>
                         </div>
+                        <a href="{{ url_for('contentPostgrad') }}" class="buttontonext"> Click here to learn about Postgraduate degrees at UWA </a> <br>
+                        <a href="{{ url_for('contentUndergrad') }}" class="buttontonext"> Click here to go back to the Undergraduate degree </a>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">

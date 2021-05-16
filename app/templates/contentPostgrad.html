@@ -1,17 +1,6 @@
 {%extends "base.html" %}
 {%block head%}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->
-    <style>
-        a {
-            text-decoration:underline;
-            color:lightblue;
-        }
-        .def-text {
-            font-weight:bold;
-            font-style:italic;
-            text-decoration: underline;
-        }
-    </style>
 {%endblock%}
 {%block body%}
         <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
@@ -84,13 +73,16 @@
                         <h1 style="margin-top:10px; font-size:32px;"> Differences Between Honours, Master's and PhD </h1>
                         <div class="caro-text" style="margin-top:20px;">
                             <p> The main difference between the two typically lies in the type of work you do throughout the course and the duration of the course. </p>
-                            <ul>
+                            <ul style="margin-bottom:30px;">
                                 <li> Master’s courses are typically 1.5-2 years and can be done by coursework, coursework and dissertation/thesis or by thesis only. </li>
                                 <li> Honours courses are 1 year in duration and involve both coursework and a written dissertation. </li>
                                 <li> Additionally, a PhD is a course that you undertake after your Honours/Masters and involves a “program of independent, supervised research that is assessed solely on the basis of a thesis that is examined externally”. </li>
                                     <li style="margin-left:30px;"> These are often 4+ year long courses that involve independent research on a certain field of study and are the highest level of degree that you can obtain. </li>
                             </ul>
                         </div>
+                        <a href="{{ url_for('contentDefinitions') }}" class="buttontonext"> Click here for Additional Information and Definitions </a> <br>
+                        <a href="{{ url_for('contentUndergrad') }}" class="buttontonext"> Click here to go back to the Undergraduate degree </a> <br>
+                        <a href="{{ url_for('contentEnrolment') }}" class="buttontonext"> Click here to go back to Enrolment </a> <br>
                     </div> 
                 </div>
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">

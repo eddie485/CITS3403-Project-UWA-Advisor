@@ -1,18 +1,6 @@
 {%extends "base.html" %}
 {%block head%}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->
-    <style>
-        a {
-            text-decoration:underline;
-            color:lightblue;
-        }
-        .def-text {
-            font-weight:bold;
-            font-style:italic;
-            text-decoration: underline;
-        }
-
-    </style>
 {%endblock%}
 {%block body%}
         <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
@@ -98,12 +86,16 @@
                     <div class="carousel-caption" style="color:white;">
                         <h1 style="margin-top:10px; font-size:32px;"> Definitions #3 </h1>
                         <div class="caro-text" style="margin-top:20px;">
-                            <ul> 
+                            <ul style="margin-bottom:25px;"> 
                                 <li><span class="def-text"> Credits </span>: Each of your units is worth a number of credit points. Most units are worth six points; a small number of project units are worth 12 points each. In order to complete your undergraduate degree you need to complete units worth a total of 144 credit points. The credit points for each unit are listed in its Handbook entry. </li>
                                 <li><span class="def-text"> Levels </span>: All units are assigned a Level which indicates the amount of prior knowledge or maturity of learning required to study the unit successfully. Undergraduate units are classified into three levels. Level 1 units are entry-level or introductory units. You can progress to Level 2 or Level 3 units as soon as you meet the prerequisites and any other unit rules. </li>
                                 <li><span class="def-text"> Full-Time and Part-Time Study </span>: Full-time study is defined as undertaking 3+ units a semester. Part-time study is defined as undertaking 1-2 maximum. </li>
                             </ul>
                         </div>
+                        <a href="{{ url_for('quizHome') }}" class="buttontonext"> Click here to take our UWA enrolment quizzes! </a> <br>
+                        <a href="{{ url_for('contentUndergrad') }}" class="buttontonext"> Click here to go back to the Undergraduate degree </a> <br>
+                        <a href="{{ url_for('contentEnrolment') }}" class="buttontonext"> Click here to go back to Enrolment </a> <br>
+                        <a href="{{ url_for('contentPostgrad') }}" class="buttontonext"> Click here to go back to the Postgraduate degree </a>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
