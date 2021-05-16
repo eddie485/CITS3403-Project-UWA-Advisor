@@ -1,9 +1,13 @@
+/* Changes to "next" and "previous" icons for carousel included in Bootstrap - changed colour */
 .carousel-control-prev-icon {
     background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(39,52,139,255)' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e"); 
 }
+
 .carousel-control-next-icon {
     background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(39,52,139,255)' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
 }
+
+/* Styling for the "slide selector" buttons at bottom of carousel slides. Changed colours, borders. */
 .carousel-indicators li {
     box-sizing:content-box;
     -ms-flex:0 1 auto;
@@ -21,6 +25,8 @@
     opacity:.5;
     transition:opacity .6s ease
 }
+
+/* Styling for the background image of the carousel - Credit goes to The University of Western Australia for image of Winthrop Hall. */ 
 .caro-image {
     position:relative;
     top: 0;
@@ -32,6 +38,8 @@
     margin-bottom: 30px;
     border-radius: 20px;
 }
+
+/* Styling for the blue background on which text is displayed in carousel slides. */ 
 .caro-image-overlap {
     opacity: 90%;
     position:absolute;
@@ -44,6 +52,8 @@
     right:25%;
     border-radius: 7px;
 }
+
+/* Styling for ALL the text inside each of the carousel slides that contains the teaching content of our website */
 .carousel-caption {
     position:absolute;
     z-index:10;
@@ -55,6 +65,8 @@
     text-align:center;
     color:white;
 }
+
+/* Styling for the main text content for each slide */ 
 .caro-text{
     font-size: 1vw;
     margin-left:20%;
@@ -63,9 +75,13 @@
     word-wrap: break-word;
     text-align:left;
 }
+
+/* Styling for lists points to leave more gap between lines. */ 
 li {
     margin-top: 5px;
 }
+
+/* Styling for the progress bar - changed color */ 
 .progress-bar {
     display:-ms-flexbox;
     display:flex;
@@ -80,15 +96,21 @@ li {
     background-color:#27348b;
     transition:width .6s
 }
+
+/* Improved visibility for links with colouring, underlines */ 
 a {
     text-decoration:underline;
     color:lightblue;
 }
+
+/* Created a class for the definitions in contentDefinitions.html */ 
 .def-text {
     font-weight:bold;
     font-style:italic;
     text-decoration: underline;
 }
+
+/* Styling for the buttons (links) to go to the next section in each content page. */ 
 a.buttontonext {
     font-family: "TTNormsPro",Arial,sans-serif;
     font-size: 22px;
@@ -101,15 +123,22 @@ a.buttontonext {
     text-decoration: none;
     text-align: center;
 }
+
+/* Styling for hovering over next section buttons */ 
 .buttontonext:hover {
     background-color: rgba(39,52,139,255);
     color: #e2b600;
     text-decoration: none;
 }
+
+/* Styling for h1 headers - using vw for font-size in order to allow for responsive text. */ 
 h1 { 
     margin-top:10px;
     font-size:2.2vw; 
 }
+
+/* Next three classes define the styling for the text at top of each of the content pages (title and descriptor text) */
+/* First relates to the positioning of the text at the top of the page. */ 
 .content-headings{
     text-align:center;
     margin:25px 50px 0px 50px
@@ -124,9 +153,13 @@ h1 {
     margin-right:150px; 
     font-size:20px;
 }
+
+/* Styling for indented lists */ 
 .list-indented {
     margin-left:30px;
 }
+
+/* Margins for carousel titles for better formatting of text on each slide - first one is for the intro slides, second is for other slides */ 
 .first-slide-spacer {
     margin-top: 12px;
 }
