@@ -3,9 +3,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->
 {%endblock%}
 {%block body%}
-        <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
-            <h1 style="color:rgba(39,52,139,255)"> Enrolling in Your First Undergraduate Degree </h1>
-            <p style="margin-top:20px; margin-left:150px; margin-right:150px; font-size:20px;"> Now that we've learnt all about course requirements, units and majors, let's enrol for our first undergraduate degree! </p>
+        <div class="center content-headings">
+            <h1 class="content-section-title"> Enrolling in Your First Undergraduate Degree </h1>
+            <p class="content-section-text"> Now that we've learnt all about course requirements, units and majors, let's enrol for our first undergraduate degree! </p>
         </div>
         <div class="progress my-2">
             <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%;"> </div>
@@ -20,9 +20,9 @@
                 <div class="carousel-item active" data-step="1">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="First slide" >
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px;"> Enrolling on StudentConnect </h1>
-                        <div class="caro-text" style="margin-top:12px; font-size:16px;">
+                    <div class="carousel-caption">
+                        <h1> Enrolling on StudentConnect </h1>
+                        <div class="caro-text first-slide-spacer">
                             <p> Now that we're all set up, the next step is to simply enrol in our course on UWA's online student hub, StudentConnect. </p>
                             <p> Start by logging into the StudentConnect site which can be found 
                                     <a href="https://www.uwa.edu.au/students" target="_blank"> here. </a></p>
@@ -38,13 +38,13 @@
                 <div class="carousel-item" data-step="2">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Second slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px;"> Class Allocation System </h1>
-                        <div class="caro-text" style="margin-top:25px; font-size:16px;">
+                    <div class="carousel-caption">
+                        <h1> Class Allocation System </h1>
+                        <div class="caro-text general-slide-spacer" style="font-size:0.95vw;">
                             <p> Now all that is left is for you to sort out your University timetable on UWA’s class allocation system, also known as CAS. You can access CAS at cas.uwa.edu.au. You can select preferences up to four for which times you would like certain classes (tutorials, labs, workshops, etc.) to be allocated for you. Certain classes such as lectures are often not changeable. </p>
                             <p> The Class Allocation System will look like the image below. Click on this image to be directed to the CAS UWA website. </p>
                             <a href="https://www.cas.uwa.edu.au/" target="_blank">
-                                <img style="display:block; width:50%; height:255px; margin-right:auto; margin-left:auto;" src="{{ url_for('static', filename='Images/CASexampleimage.png')}}" alt="CAS Example">
+                                <img style="display:block; width:60%; margin-right:auto; margin-left:auto; margin-top:20px;" src="{{ url_for('static', filename='Images/CASexampleimage.png')}}" alt="CAS Example">
                             </a>
                         </div>
                     </div>
@@ -52,10 +52,10 @@
                 <div class="carousel-item" data-step="3">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Third slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px;"> What's Next? </h1>
-                        <div class="caro-text" style="margin-top:25px;">
-                            <ul style="margin-bottom:30px;">
+                    <div class="carousel-caption">
+                        <h1> What's Next? </h1>
+                        <div class="caro-text general-slide-spacer">
+                            <ul style="margin-bottom:22px;">
                                 <li> Congratulations! Now that you’ve finished enrolling at UWA, you can look into getting your own Campus Card! This can be done in-person from Student Central at UWA and the process begins online through studentconnect. </li>
                                 <li> Next, you have the freedom to access your very own student email which, as of 2020, is available on Microsoft Outlook and can also be accessed through studentconnect. </li>
                                 <li> Other things that you can now do involve making your own USI (Unique Student Identifier) and applying for the HECS-HELP loan scheme if you are a domestic student and wish to apply for governmental support for payment of your university course. You will need your tax-file number for this step and the setup is accessible once again through studentconnect. </li>

@@ -3,9 +3,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->
 {%endblock%}
 {%block body%}
-        <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
-            <h1 style="color:rgba(39,52,139,255)"> Additional Information and Course Definitions  </h1>
-            <p style="margin-top:20px; margin-left:150px; margin-right:150px; font-size:20px;"> As a final part of our How-To guide on enrolling at UWA, here's a few more things you should know about changing courses and course adjustments, as well as a library of definitions to look at if you're unsure on anything that we've discussed in previous sections. </p>
+        <div class="center content-headings">
+            <h1 class="content-section-title"> Additional Information and Course Definitions  </h1>
+            <p class="content-section-text"> As a final part of our How-To guide on enrolling at UWA, here's a few more things you should know about changing courses and course adjustments, as well as a library of definitions to look at if you're unsure on anything that we've discussed in previous sections. </p>
         </div>
         <div class="progress my-2">
             <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%;"> </div>
@@ -22,9 +22,9 @@
                 <div class="carousel-item active" data-step="1">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="First slide" >
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px;"> Changing Majors/Degrees </h1>
-                        <div class="caro-text" style="margin-top:12px; font-size:16.5px;">
+                    <div class="carousel-caption">
+                        <h1> Changing Majors/Degrees </h1>
+                        <div class="caro-text first-slide-spacer" style="font-size:0.98vw;">
                             <p> If at any point during your degree you wish to change your major, log into your studentconnect and change the unit set of the major(s) that you are currently enrolled into the major that you wish to change to. </p>
                             <ul>
                                 <li> Please keep in mind that changing your major may extend the duration of your degree according to the units that you have already undertaken and have to undertake. </li>
@@ -38,9 +38,9 @@
                 <div class="carousel-item" data-step="2">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Second slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px; font-size:32px;"> Changes in Course Structure During Your Degree </h1>
-                        <div class="caro-text" style="margin-top:20px;">
+                    <div class="carousel-caption">
+                        <h1 style="font-size:1.95vw;"> Changes in Course Structure During Your Degree </h1>
+                        <div class="caro-text general-slide-spacer">
                             <p> If a certain major that you are undertaking changes the degrees in its course structure, either by removing them entirely or changing a prerequisite for that major, you are able to contact your degree’s faculty office at UWA (e.g. School of Science for Bachelor of Science) and ask them to keep you enrolled in the course in the year that you first began the major. </p> <br>
                             <ul>
                                 <li> For example, if I began my degree majoring in Data Science as my degree-specific major in 2019, and I have undertaken units that are now removed from the course, I have the option of continuing the course as it was in 2019 or 2020.</li>
@@ -52,9 +52,9 @@
                 <div class="carousel-item" data-step="3">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Third slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px; font-size:32px;"> Definitions #1 </h1>
-                        <div class="caro-text" style="margin-top:20px;">
+                    <div class="carousel-caption">
+                        <h1 style="font-size:1.95vw"> Definitions #1 </h1>
+                        <div class="caro-text general-slide-spacer">
                             <p> The next few slides are a resource of definitions of the course terminology that we have discussed in all previous parts of the course. Feel free to browse as a refresher if there are parts of our tutorial that you did not understand. </p>
                             <p> Most of these definitions have been sourced from UWA and credit goes to the university. </p>
                             <ul> 
@@ -68,9 +68,9 @@
                 <div class="carousel-item" data-step="4">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Fourth slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px; font-size:32px;"> Definitions #2 </h1>
-                        <div class="caro-text" style="margin-top:20px;">
+                    <div class="carousel-caption">
+                        <h1 style="font-size:1.95vw"> Definitions #2 </h1>
+                        <div class="caro-text general-slide-spacer">
                             <ul> 
                                 <li><span class="def-text"> Degree-Specific Major </span>: Each three-year undergraduate degree has its own degree-specific majors, and you must complete at least one degree-specific major from your course.  </li>
                                 <li><span class="def-text"> Second Majors </span>: If you wish to do a second major you can. As a result, however, you will have less electives throughout your undergrad degree since they will replace the credit space you are able to take. </li>
@@ -83,9 +83,9 @@
                 <div class="carousel-item" data-step="5">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Fifth slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px; font-size:32px;"> Definitions #3 </h1>
-                        <div class="caro-text" style="margin-top:20px;">
+                    <div class="carousel-caption">
+                        <h1 style="font-size:1.95vw"> Definitions #3 </h1>
+                        <div class="caro-text general-slide-spacer">
                             <ul style="margin-bottom:25px;"> 
                                 <li><span class="def-text"> Credits </span>: Each of your units is worth a number of credit points. Most units are worth six points; a small number of project units are worth 12 points each. In order to complete your undergraduate degree you need to complete units worth a total of 144 credit points. The credit points for each unit are listed in its Handbook entry. </li>
                                 <li><span class="def-text"> Levels </span>: All units are assigned a Level which indicates the amount of prior knowledge or maturity of learning required to study the unit successfully. Undergraduate units are classified into three levels. Level 1 units are entry-level or introductory units. You can progress to Level 2 or Level 3 units as soon as you meet the prerequisites and any other unit rules. </li>
