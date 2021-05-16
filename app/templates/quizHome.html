@@ -36,12 +36,12 @@
 {%endblock%}
 {%block body%}
         <div class ="container">
-            <h2><i class="fas fa-user-graduate"></i> Individual Performance</h2>
+            <h2 style="padding-top:10px;"><i class="fas fa-user-graduate"></i> Individual Performance</h2>
             <hr>
             <div class = "row">
                 <div class = "col-4">
-                    <h4 style= "font-size: 21.5px;" >Monkey D luffy</h4>
-                    <h4 style = "font-size: 19px;">Student</h4>
+                    <h4 style= "font-size: 21.5px;" > {{ current_user.username }}</h4>
+                    <h4 style = "font-size: 19px;"> {{ current_user.studentid }}</h4>
                 </div>
                 <div class = "col-8">
                     <h4 style = "font-size: 21.5px;">Course Knowledge Tests</h4>
