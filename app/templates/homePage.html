@@ -45,7 +45,7 @@
         } 
 
         .underline {
-        text-decoration: underline;
+            text-decoration: underline;
         }
 
         </style>
@@ -55,7 +55,7 @@
         <div class="bg-text">
         
         {% block content %} 
-            <h1 >Welcome {{ current_user.username }}!</h1>
+            <h1 >Welcome {{ current_user.name }}!</h1>
         {% endblock %}
                 <h1 style="font-size:30px">UWA Enrolment Guide </h1>
                 <br>
@@ -96,7 +96,7 @@
                 <div class= "verticalLine"></div>
                 <div class= "col">
                     <h5><strong style="font-weight: 700;">Find your Course</strong></h5>
-                    <p>To find your current courebook click here</p>
+                    <p>To find your current coursebook click here</p>
                     <button onclick="document.location='https://www.uwa.edu.au/study/courses-and-careers/find-a-course'" class ='btn btn-outline-primary btn-lg btn-block'>Click Here</button>
                     <br>
                     <h5><strong>A Taste of Campus Culture</strong></h5>
