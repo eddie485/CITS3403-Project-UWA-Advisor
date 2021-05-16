@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='Styles/welcome-style.css')}}">
         <title>UWA Enrolment and Studies Guide</title>
         <style>
-            .material-icons{
+            .material-icons {
                 margin: auto; 
             }
         </style>
@@ -37,7 +37,7 @@
                         <p>
                             {{ form.username(class="inputField", size=32, placeholder="Enter your username") }} <br>
                             {% for error in form.username.errors %}
-                            <span style="color:red;"> [{{ error }} ] </span>
+                            <span style="color:red; margin-left:10px;"> [{{ error }} ] </span>
                             {% endfor %}
                         </p>
                     </div>
@@ -46,7 +46,7 @@
                         <p>
                             {{ form.password(class="inputField", size=32, placeholder="Enter your password") }} <br>
                             {% for error in form.password.errors %} 
-                            <span style="color:red;"> [{{ error }}] </span>
+                            <span style="color:red; margin-left:10px;"> [{{ error }}] </span>
                             {% endfor %} 
                         </p>
                     </div>
@@ -56,7 +56,7 @@
                     </label>
 
                     <button onclick="openPopup()" style="float:right; margin-right: 15px; color:rgba(226,182,0,255); background-color: transparent;">
-                        Forgot password?</button>
+                        Forgot password? </button>
 
                     {{ form.submit(class="button", style="display:block; margin-left:auto; margin-right:auto; margin-top:10px;") }} 
                 </form>
