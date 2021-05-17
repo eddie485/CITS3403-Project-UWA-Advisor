@@ -5,6 +5,7 @@
         <meta name="viewport" content="width = device-width, initial-scale = 1"> 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="{{ url_for('static', filename='Styles/welcome-style.css')}}">
+        <!--This part of the site is separate from the others, hence we do not call the base.html using Jinja.-->
         <title>UWA Enrolment and Studies Guide</title>
         <style>
             .material-icons {
@@ -21,20 +22,17 @@
             <p id="msg" style="font-size: small; margin: 10px; text-align: center;"></p>
         </div>
 
-<!-- <input class="inputField" type="text" id="username" name="username" placeholder="Enter your username" value="{{ request.form.username }}"><br>
-<input class="inputField" type="password" id="pass" name="pass" placeholder="Enter your password" value="{{ request.form.password }}"><br>
-
--->
-
 {% block content %}
         <div class="mainContainer" id="mainForm" style="height:335px;">
             <h1 style="text-align:center; margin-right:16px;"> WELCOME </h1>
             <div>
+                <!--Used forms and python-wtforms in order to create User login feature. Jinja used to verify username with werkzeug additionally used for authentication.-->
                 <form action="" method="post" novalidate>
                     {{ form.hidden_tag() }}
                     <div class="inputContainer">
                         <i class="material-icons">account_circle</i>
                         <p>
+                            <!--Formatted Jinja to stylise login prompts, error messages shown in red.-->
                             {{ form.username(class="inputField", size=32, placeholder="Enter your username") }} <br>
                             {% for error in form.username.errors %}
                             <span style="color:red; margin-left:10px;"> [{{ error }} ] </span>
@@ -50,6 +48,7 @@
                             {% endfor %} 
                         </p>
                     </div>
+                    <!--"Remember me" functionality - keeps user logged in when clicking off the page.-->
                     <label style="margin-left: 20px; right:670px; padding-right:23px; font-size:14px;"> Remember Me
                         {{ form.remember_me() }} </label>
                         <span class="checkmark"></span>
@@ -61,9 +60,6 @@
                     {{ form.submit(class="button", style="display:block; margin-left:auto; margin-right:auto; margin-top:10px;") }} 
                 </form>
 
-                {% if error %}
-                    <p class="error">Error: {{error}}
-                {%endif%}
             </div>
             <div class="submitContainer">
                 <p>Don't have an account?</p>

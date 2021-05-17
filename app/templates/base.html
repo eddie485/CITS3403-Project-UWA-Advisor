@@ -53,6 +53,8 @@
                         <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
                     </li>
 
+                    <!--Tests to see if the current user is not logged in. The button will redirect to the login page either way, however displays differently
+                    whether the user is logged in or not.-->
                     {% if current_user.is_anonymous %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('login') }}">Login</a>
