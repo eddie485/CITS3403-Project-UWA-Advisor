@@ -9,24 +9,6 @@ from werkzeug.urls import url_parse
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('homePage'))
-
-from app.models import User
-from app.forms import LoginForm, RegistrationForm, EditProfileForm
-from flask import render_template, request, redirect, url_for, flash
-from flask_login import current_user, login_user, logout_user, login_required
-from werkzeug.urls import url_parse
-
-# Main/index route is the login page
-# Users are asked to put in their credentials for log in, assuning they already have an account
-# If the input passes validation they are redirected to the homepage
-#The below code is adapted from Miguel Grinberg's Flask Megatutorial to fit our project's functionality.
-
-@app.route("/", methods=['GET', 'POST'])
-def login():
-    #Following two lines redirects the user to the UWA Advisor home page once login is authenticated.
-    if current_user.is_authenticated:
-        return redirect(url_for('homePage'))
-
     form = LoginForm()
 
     if form.validate_on_submit():
