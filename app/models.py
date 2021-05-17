@@ -11,7 +11,7 @@ class User(UserMixin, db.Model):
     year = db.Column(db.Integer, index = True, unique = False)
     studentid = db.Column(db.Integer, index = True, unique = True)
     dateofbirth = db.Column(db.Date(), index=True, unique=False)
-    email = db.Column(db.String(128), index = True, unique = True)
+    email = db.Column(db.String(64), index = True, unique = True)
     password_hash = db.Column(db.String(128))
 
     def __repr__(self):
