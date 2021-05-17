@@ -52,7 +52,7 @@
                     <p>
                         {{ form.dateofbirth(class="inputField", size=32, placeholder="Enter your date of birth", onfocus = "(this.type = 'date')", type="text") }} <br>
                         {% for error in form.dateofbirth.errors %} 
-                        <span style="color:red;"> [{{ error }}] </span>
+                        <span style="color:red;"> [{{ "Sorry, your input is invalid, please retry." }}] </span>
                         {% endfor %}
                     <!-- <input class="inputField" placeholder = "Enter your your date of birth" type = "text" onfocus = "(this.type = 'date')"  id = "date"> -->
                     </p>
@@ -62,7 +62,7 @@
                     <i class="material-icons">menu_book</i>
                     <p>
                         {{ form.major(class="inputField", size=32, placeholder="Enter your major") }} <br>
-                        {% for error in form.name.errors %} 
+                        {% for error in form.major.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %} 
                     <!-- <input class="inputField" type="text" id="fname" name="fname" placeholder="Enter your full name"><br> -->
@@ -72,7 +72,7 @@
                     <i class="material-icons">tag</i>
                     <p>
                         {{ form.year(class="inputField", size=32, placeholder="Enter your current year of study") }} <br>
-                        {% for error in form.username.errors %} 
+                        {% for error in form.year.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %} 
                     <!-- <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br> -->
@@ -82,7 +82,7 @@
                     <i class="material-icons">badge</i>
                     <p>
                         {{ form.studentid(class="inputField", size=32, placeholder="Enter your student id") }} <br>
-                        {% for error in form.username.errors %} 
+                        {% for error in form.studentid.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %} 
                     <!-- <input class="inputField" type="text" id="usrnm" name="usrnm" placeholder="Enter your username"><br> -->
