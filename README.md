@@ -5,25 +5,65 @@ Main project for Agile Web Development.
 ## About
 UWA ADVISOR
 
-The project will be about a website that helps UWA students with their enrolments and further studies at the University. The website has a contents page which explains the rules and terms that they must follow when 
-enrolling at the University of Western Australia. It explains concepts such as undergraduate enrolment, postgrad
-enrolment, what to do if a unit changes its course outline as well as other definitions that new students should be familiar with when starting off at uni. Alongside the contents page there are also quizes to help ensure that they have a good understanding of everything they learnt previously. A mock study plan is also available which lets users create a study plan for their first three years of undergrad. For now the only majors available in the study plan are Finance and Data Science, within these majors their core units can be selected and added into the study plan.
+Our project website is designed to help UWA students with learning about the undergraduate and postgraduate course structure at the University of Western Australia, simultaneously creating a "How To" guide on how to enrol on studentconnect. 
+The content of our project elaborates and explains the rules and terms that they must follow when enrolling at UWA. It explains concepts such as undergraduate enrolment, postgraduate enrolment, what to do if a unit changes its course outline, how to switch majors/courses, as well as other definitions that new students should be familiar with when starting off at University.
+This content is presented in the form of Bootstrap carousel slides (adapted to the aesthetic and functional needs of our webpage) and is presented in four sections: Undergraduate, Enrolment, Postgraduate, and Additional Information and Definitions
+Alongside the contents page there are also multiple choice quizzes to help ensure that the student/user has a good understanding of everything they learn throughout the content slides.
+A mock study plan is also available which lets users begin creating a study plan, dragging and dropping their core and complementarity units throughout their undergraduate degree. This was designed in order to help students choose their essential course units so that picking broadening units and electives can be much simpler when it comes to making their real study plans.
+The example majors that we selected and that are available in the study plan are Finance and Data Science.
 
 UWA Advisor contains the following pages:
     - Login and Registration
     - Home
     - Contents
+        > Undergraduate
         > Enrolment
-        > Undergrad
-        > Postgrad
+        > Postgraduate
         > Definitions
-    - Profile and Edit Profile
-    - Quizes Home Page
-        > Quizes (one quiz for each content page)
-    - Results Page
-    - Study Plan Maker
+    - Study Plan
         > Finance
-        > Data Science
-    
+        > Data Science (Selecting major redirects you to study plan page for selected major) 
+    - Quizzes Home Page
+        > Undergraduate Quiz
+        > Enrolment Quiz
+        > Postgraduate Quiz
+        > Definitions Quiz
+        > Quiz Results
+    - Profile and Edit Profile
+
+## Running the Project
+
+Our application uses Python 3.8.5 to run. Please install Python on your computer by typing the following into your command line if you are on linux or using a windows WSL: 
+Additionally on windows you must install python off the website available at https://www.python.org/downloads/. 
+```
+sudo apt-install python3.8
+```
+
+Next, you must set up the virtual environment in which the project is run. This can be done through python using the following commands.
+In the command line, go to the project's directory and type: 
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## Unit Tests
+
+In order to run the unit tests that we have made for the project, open the directory for the project on the command line and enter:
+```
+python -m unittest discover
+```
+
+## Running the Website
+
+In order to run the web server locally, with each of the previous steps followed, packages installed and with the .env file in the directory submitted with the project:
+Go to the directory for the project on command line and type the following:
+```
+flask run
+```
+
+## Acknowledgements and References
+
+
+
 ## Creators
-This project was made by Sohail, Michael, Jack and Ervin.
+This project was made by **Sohail**, **Michael**, **Jack** and **Ervin**.
