@@ -46,12 +46,14 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-## Unit Tests
+## Testing
 
 In order to run the unit tests that we have made for the project, open the directory for the project on the command line and enter:
 ```
 python -m unittest discover
 ```
+To run the selenium tests, make sure the database is deleted and then load the selenium_testing.py into a new project in selenium IDE, or use the .side file also included. Deleting the database ensures that proper testing of user registration is possible, by providing a clean slate.
+
 
 ## Running the Website
 
