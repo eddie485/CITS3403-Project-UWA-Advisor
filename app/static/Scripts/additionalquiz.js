@@ -67,6 +67,14 @@
           // color the answers red
           answerContainers[questionNumber].style.color = 'red';
         }
+
+        fetch('/submit/4', {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({score: numCorrect}),
+        }).then(() => {
+          console.log("sent score to server");
+        });
       });
   
       // show number of correct answers out of total
