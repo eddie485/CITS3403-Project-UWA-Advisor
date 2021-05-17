@@ -69,6 +69,7 @@ flask run
 
 ## Acknowledgements and References
 All photos used are photos of the university and is owned by UWA
+CSS and Javscript libraries were used from Bootstrap, AJAX and jQuery.
 
 
 ## Creators
