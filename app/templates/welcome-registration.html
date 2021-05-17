@@ -54,9 +54,7 @@
                         {% for error in form.dateofbirth.errors %} 
                         <span style="color:red;"> [{{ "Sorry, your input is invalid, please retry." }}] </span>
                         {% endfor %}
-                    <!-- <input class="inputField" placeholder = "Enter your your date of birth" type = "text" onfocus = "(this.type = 'date')"  id = "date"> -->
                     </p>
-                    <!--onfocus="(this.type = 'date')" allows the placeholder to be seen before clicking-->
                 </div>
                 <div class="inputContainer">
                     <i class="material-icons">menu_book</i>
@@ -105,9 +103,6 @@
                         {% for error in form.password.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %}
-                        <!-- <input class="inputField" type="password" id="pass1" name="pass1" placeholder="Enter your password"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br/> -->
                     </p>
                 </div>
                 <div class="inputContainer">
@@ -117,7 +112,6 @@
                         {% for error in form.password2.errors %} 
                         <span style="color:red;"> [{{ error }}] </span>
                         {% endfor %}
-                        <!-- <input class="inputField" type="password" id="pass2" name="pass2" placeholder="Enter your password again"><br> -->
                     </p>
                 </div>
                 <div class="submitContainer">

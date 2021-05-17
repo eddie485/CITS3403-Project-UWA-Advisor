@@ -1,0 +1,144 @@
+{%extends "base.html" %}
+{%block head%}
+        <style>
+            body{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.35)),url("https://i.pinimg.com/originals/81/46/c8/8146c84f61351a9e5d33226251bb9e2f.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .profile-pic{
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                margin: 10px auto;
+                border: 10px solid rgba(226,182,0,255);
+                border-radius: 45%;
+            }
+            .edit-button{
+                float:right;
+                background-color:rgba(226,182,0,255); 
+                color:rgba(39,52,139,255); 
+                border-radius: 15%;
+            }
+            .results-shortcut{
+                font-size: 15px;
+                font-weight: bolder;
+                border-radius: 5px;
+                padding: 15px;
+                background-color:rgba(226,182,0,255);
+                color:rgba(39,52,139,255);
+            }
+            .card{
+                background-color: rgba(1, 0, 54, 0.5); 
+                color: whitesmoke; 
+            }
+
+        </style>
+{%endblock%}
+{%block body%}
+        <form action="" method="post">
+            <div class="student-profile py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card shadow-sm" style="height:auto">
+                                <div class="card-header bg-transparent text-center">
+                                    <img class="profile-pic" src="{{ url_for('static', filename='Images/profileImage.jpg')}}" alt="profile picture">
+                                    <h3 id="editable" contenteditable="false">{{ form.name(size=6) }}
+                                        {% for error in form.name.errors %}
+                                        <span style="color: red;">[{{ error }}]</span>
+                                        {% endfor %}
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-0"><strong class="pr-1">Student ID:</strong>
+                                        {{ form.studentid(size=6) }}
+                                        {% for error in form.studentid.errors %}
+                                        <span style="color: red;">[{{ error }}]</span>
+                                        {% endfor %}
+                                    </p>
+                                    <p class="mb-0"><strong class="pr-1">Major:</strong>
+                                        {{ form.major(size=6) }}
+                                        {% for error in form.major.errors %}
+                                        <span style="color: red;">[{{ error }}]</span>
+                                        {% endfor %}
+                                    </p>
+                                    <p class="mb-0"><strong class="pr-1">Year:</strong>
+                                        {{ form.year(size=6) }}
+                                        {% for error in form.year.errors %}
+                                        <span style="color: red;">[{{ error }}]</span>
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card shadow-sm">
+                                <div class="card-header bg-transparent border-0">
+                                    <h3 class="mb-0"> Edit Account Details</h3>
+                                </div>
+                                <div class="card-body pt-0">
+                                    {{ form.hidden_tag() }}
+                                    <table class="table" style="color: whitesmoke">
+                                        <tr>
+                                            <th width="25%">Username</th>
+                                            <td>{{ form.username(size=32) }}
+                                                {% for error in form.username.errors %}
+                                                <span style="color: red;">[{{ error }}]</span>
+                                                {% endfor %}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th width="25%">Email</th>
+                                            <td>{{ form.email(size=32) }}
+                                                {% for error in form.email.errors %}
+                                                <span style="color: red;">[{{ error }}]</span>
+                                                {% endfor %}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th width="25%">Date of Birth</th>
+                                            <td>{{ form.dateofbirth(size=32) }}
+                                                {% for error in form.dateofbirth.errors %}
+                                                <span style="color: red;">[{{ error }}]</span>
+                                                {% endfor %}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th width="25%">Password</th>
+                                            <td>{{ current_user.password }}</td>
+                                        </tr>
+                                    </table>
+                                    {{ form.submit(class="edit-button", style="display:block; 
+                                    text-align:center; background-color:rgba(226,182,0,255); 
+                                    color:rgba(39,52,139,255);") }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        {%endblock%}
+        <script>
+            function editFunction(){
+                var x = document.getElementById("editable");
+                if (x.contentEditable == "false") {
+                    x.contentEditable = "true";
+                } 
+                else {
+                    x.contentEditable = "false";
+                }            
+            }
+        </script>
+        
+    </body>
+</html>
