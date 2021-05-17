@@ -13,23 +13,19 @@ A mock study plan is also available which lets users begin creating a study plan
 The example majors that we selected and that are available in the study plan are Finance and Data Science.
 
 UWA Advisor contains the following pages:
-    - Login and Registration
-    - Home
-    - Contents
-        > Undergraduate
-        > Enrolment
-        > Postgraduate
-        > Definitions
-    - Study Plan
-        > Finance
-        > Data Science (Selecting major redirects you to study plan page for selected major) 
-    - Quizzes Home Page
-        > Undergraduate Quiz
-        > Enrolment Quiz
-        > Postgraduate Quiz
-        > Definitions Quiz
-        > Quiz Results
-    - Profile and Edit Profile
+- Login and Registration
+- Home
+- Contents
+> Undergraduate, Enrolment, Postgraduate, Definitions
+- Study Plan
+> Finance or Data Science (Selecting major redirects you to study plan page for selected major) 
+- Quizzes Home Page
+> Undergraduate Quiz
+> Enrolment Quiz
+> Postgraduate Quiz
+> Definitions Quiz
+> Quiz Results
+- Profile and Edit Profile
 
 ## Running the Project
 
@@ -64,8 +60,8 @@ flask run
 ```
 
 ## Acknowledgements and References
-
+All photos used are photos of the university and is owned by UWA
 
 
 ## Creators
-This project was made by **Sohail**, **Michael**, **Jack** and **Ervin**.
+This project was made by **Sohail Kharrazi 22707644**, **Michael Tan 22710212**, **Jack Chen 22768692** and **Ervin Basilio 22836721**.
