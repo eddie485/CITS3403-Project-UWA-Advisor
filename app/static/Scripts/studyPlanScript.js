@@ -70,7 +70,7 @@ stopScroll();                                                                   
 });
 
 function stopScroll() {
-    if($('.side').offset().top + $('.side').height() >= $('footer').offset().top) {     // Takes offsets of each container (side and footer), and changes the position CSS element to either absolute or fixed)
+    if($('.side').offset().top + $('.side').height() >= $('footer').offset().top) {     // Takes offsets of each container (side and footer), and changes the position CSS element to either absolute or fixed
         $('.side').css('position', 'absolute')};
     if($(document).scrollTop() + window.innerHeight < $('footer').offset().top){
         $('.side').css('position', 'fixed')}; 

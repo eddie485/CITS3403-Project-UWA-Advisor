@@ -9,5 +9,21 @@ The project will be about a website that helps UWA students with their enrolment
 enrolling at the University of Western Australia. It explains concepts such as undergraduate enrolment, postgrad
 enrolment, what to do if a unit changes its course outline as well as other definitions that new students should be familiar with when starting off at uni. Alongside the contents page there are also quizes to help ensure that they have a good understanding of everything they learnt previously. A mock study plan is also available which lets users create a study plan for their first three years of undergrad. For now the only majors available in the study plan are Finance and Data Science, within these majors their core units can be selected and added into the study plan.
 
+UWA Advisor contains the following pages:
+    - Login and Registration
+    - Home
+    - Contents
+        > Enrolment
+        > Undergrad
+        > Postgrad
+        > Definitions
+    - Profile and Edit Profile
+    - Quizes Home Page
+        > Quizes (one quiz for each content page)
+    - Results Page
+    - Study Plan Maker
+        > Finance
+        > Data Science
+    
 ## Creators
 This project was made by Sohail, Michael, Jack and Ervin.

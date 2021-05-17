@@ -46,14 +46,15 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/quiz-homepage">Quizzes</a>
                             <a class="dropdown-item" href="/test-results">Results</a>
-                        </div
-                          
+                        </div> 
                     </li>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('profile') }}">Profile</a>
                     </li>
 
+                    <!--Tests to see if the current user is not logged in. The button will redirect to the login page either way, however displays differently
+                    whether the user is logged in or not.-->
                     {% if current_user.is_anonymous %}
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('login') }}">Login</a>
@@ -69,7 +70,8 @@
         {%block body%}{%endblock%}
         <footer>
             <img src = "https://micro.org.au/wp-content/uploads/2019/08/UWA_FacilityLogo_Black_2019.png" class= "img" alt = "UWA_FacilityLogo_Black_2019" height = "100">
-            <h5 style="text-align: left;"> CITS3403 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;For More Information:</h5>
+            <h5 style="text-align: left;"> CITS3403</h5>
+            <h5 style="text-align: center;"> For More Information:</h5>
             <a href ="https://ipoint.uwa.edu.au/" class="nounderline"><span style = color:#e2b600>AskUWA</span></a>
             <br>
             <a href="https://www.uwa.edu.au/home" class="nounderline"><span style =color:#e2b600;>Official UWA Homepage</span></a>

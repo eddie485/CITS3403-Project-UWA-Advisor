@@ -1,27 +1,22 @@
 {%extends "base.html" %}
 {%block head%}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> <!--Stylesheet for the carousel-->
-    <style>
-        a {
-            text-decoration:underline;
-            color:lightblue;
-        }
-        .def-text {
-            font-weight:bold;
-            font-style:italic;
-            text-decoration: underline;
-        }
-
-    </style>
+    <!--Stylesheet for the carousel-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Styles/carouselstyle.css')}}"> 
 {%endblock%}
 {%block body%}
-        <div class="center" style="text-align:center; margin:25px 50px 0px 50px">
-            <h1 style="color:rgba(39,52,139,255)"> Additional Information and Course Definitions  </h1>
-            <p style="margin-top:20px; margin-left:150px; margin-right:150px; font-size:20px;"> As a final part of our How-To guide on enrolling at UWA, here's a few more things you should know about changing courses and course adjustments, as well as a library of definitions to look at if you're unsure on anything that we've discussed in previous sections. </p>
+
+        <!--The following div creates the top of the page which contains a header and a short description of what the following tutorial section contains.-->
+        <div class="center content-headings">
+            <h1 class="content-section-title"> Additional Information and Course Definitions  </h1>
+            <p class="content-section-text"> As a final part of our How-To guide on enrolling at UWA, here's a few more things you should know about changing courses and course adjustments, as well as a library of definitions to look at if you're unsure on anything that we've discussed in previous sections. </p>
         </div>
+
+        <!--Creates the progress bar at the top of the page which tracks the user's progress in the carousel-->
         <div class="progress my-2">
             <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%;"> </div>
         </div>
+
+        <!--Initialises Bootstrap carousel, creates buttons at bottom of each carousel which navigate to a certain slide which clicked.-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -30,13 +25,20 @@
               <li data-target="#myCarousel" data-slide-to="3"></li>
               <li data-target="#myCarousel" data-slide-to="4"></li>
             </ol>
+
+            <!--As a disclaimer, all font-sizes are set to "vw" units in order to allow the text to adjust to changes in browser-window size.-->
+            <!--The below div holds all the content in all carousel slides.-->
             <div class="carousel-inner">
+                <!--The below div holds all the content in one specific carousel slide. data-step is set to the slide number for the progress bar.-->
                 <div class="carousel-item active" data-step="1">
+                    <!--All background images are identical (to maintain consistency) and are sourced from The University of Western Australia-->
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="First slide" >
+                    <!--The following image acts as a "canvas" for the text for each slide. Sourced from colorhexa.com, and is a solid colour image of the UWA blue.-->
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px;"> Changing Majors/Degrees </h1>
-                        <div class="caro-text" style="margin-top:12px; font-size:16.5px;">
+                    <!--The below code is the actual content of each slide, with a title (heading) and the text which is presented in paragraphs and dot points.-->
+                    <div class="carousel-caption">
+                        <h1> Changing Majors/Degrees </h1>
+                        <div class="caro-text first-slide-spacer" style="font-size:0.98vw;">
                             <p> If at any point during your degree you wish to change your major, log into your studentconnect and change the unit set of the major(s) that you are currently enrolled into the major that you wish to change to. </p>
                             <ul>
                                 <li> Please keep in mind that changing your major may extend the duration of your degree according to the units that you have already undertaken and have to undertake. </li>
@@ -47,12 +49,14 @@
                         </div>
                     </div>
                 </div>
+
+                <!--Next slide, and so forth.-->
                 <div class="carousel-item" data-step="2">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Second slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px; font-size:32px;"> Changes in Course Structure During Your Degree </h1>
-                        <div class="caro-text" style="margin-top:20px;">
+                    <div class="carousel-caption">
+                        <h1 style="font-size:1.95vw;"> Changes in Course Structure During Your Degree </h1>
+                        <div class="caro-text general-slide-spacer">
                             <p> If a certain major that you are undertaking changes the degrees in its course structure, either by removing them entirely or changing a prerequisite for that major, you are able to contact your degree’s faculty office at UWA (e.g. School of Science for Bachelor of Science) and ask them to keep you enrolled in the course in the year that you first began the major. </p> <br>
                             <ul>
                                 <li> For example, if I began my degree majoring in Data Science as my degree-specific major in 2019, and I have undertaken units that are now removed from the course, I have the option of continuing the course as it was in 2019 or 2020.</li>
@@ -61,15 +65,17 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item" data-step="3">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Third slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px; font-size:32px;"> Definitions #1 </h1>
-                        <div class="caro-text" style="margin-top:20px;">
+                    <div class="carousel-caption">
+                        <h1 style="font-size:1.95vw"> Definitions #1 </h1>
+                        <div class="caro-text general-slide-spacer">
                             <p> The next few slides are a resource of definitions of the course terminology that we have discussed in all previous parts of the course. Feel free to browse as a refresher if there are parts of our tutorial that you did not understand. </p>
                             <p> Most of these definitions have been sourced from UWA and credit goes to the university. </p>
                             <ul> 
+                                <!--def-text creates a style for each of the definitions - text is italicised, bolded, and underlined.-->
                                 <li><span class="def-text"> Majors</span>: A major is a structured sequence of units in a particular discipline or field of study. It provides you with the opportunity to develop the knowledge, understanding and expertise that will equip you to move into a rewarding career after graduation or to pursue further study in a similar area at postgraduate level. You can choose a degree-specific major and a second major if you wish.  </li>
                                 <li><span class="def-text"> Minors</span>: Minors are smaller unit sets that are composed of four units that you can optionally include as part of your course. These are much like majors, however they are much shorter. </li>
                                 <li><span class="def-text"> Core Units</span>: Core units are the compulsory units in your major. Some majors are made up entirely of core units whereas others allow you to choose from a selection of options. The core units that you must do also depend on whether that major is your course-specific major or your second major. </li>
@@ -77,12 +83,13 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item" data-step="4">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Fourth slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px; font-size:32px;"> Definitions #2 </h1>
-                        <div class="caro-text" style="margin-top:20px;">
+                    <div class="carousel-caption">
+                        <h1 style="font-size:1.95vw"> Definitions #2 </h1>
+                        <div class="caro-text general-slide-spacer">
                             <ul> 
                                 <li><span class="def-text"> Degree-Specific Major </span>: Each three-year undergraduate degree has its own degree-specific majors, and you must complete at least one degree-specific major from your course.  </li>
                                 <li><span class="def-text"> Second Majors </span>: If you wish to do a second major you can. As a result, however, you will have less electives throughout your undergrad degree since they will replace the credit space you are able to take. </li>
@@ -92,20 +99,28 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="carousel-item" data-step="5">
                     <img class="d-block w-75 caro-image" src="https://www.web.uwa.edu.au/__data/assets/image/0018/2282004/centenary_year.jpg" alt="Fifth slide">
                     <img class="d block caro-image-overlap" src="https://www.colorhexa.com/27348b.png" alt="background-image">
-                    <div class="carousel-caption" style="color:white;">
-                        <h1 style="margin-top:10px; font-size:32px;"> Definitions #3 </h1>
-                        <div class="caro-text" style="margin-top:20px;">
-                            <ul> 
+                    <div class="carousel-caption">
+                        <h1 style="font-size:1.95vw"> Definitions #3 </h1>
+                        <div class="caro-text general-slide-spacer">
+                            <ul style="margin-bottom:25px;"> 
                                 <li><span class="def-text"> Credits </span>: Each of your units is worth a number of credit points. Most units are worth six points; a small number of project units are worth 12 points each. In order to complete your undergraduate degree you need to complete units worth a total of 144 credit points. The credit points for each unit are listed in its Handbook entry. </li>
                                 <li><span class="def-text"> Levels </span>: All units are assigned a Level which indicates the amount of prior knowledge or maturity of learning required to study the unit successfully. Undergraduate units are classified into three levels. Level 1 units are entry-level or introductory units. You can progress to Level 2 or Level 3 units as soon as you meet the prerequisites and any other unit rules. </li>
                                 <li><span class="def-text"> Full-Time and Part-Time Study </span>: Full-time study is defined as undertaking 3+ units a semester. Part-time study is defined as undertaking 1-2 maximum. </li>
                             </ul>
                         </div>
+                        <!--Buttons at the end of each carousel slideshow to proceed to next section or go back to a previous section.-->
+                        <a href="{{ url_for('quizHome') }}" class="buttontonext"> Click here to take our UWA enrolment quizzes! </a> <br>
+                        <a href="{{ url_for('contentUndergrad') }}" class="buttontonext"> Click here to go back to the Undergraduate degree </a> <br>
+                        <a href="{{ url_for('contentEnrolment') }}" class="buttontonext"> Click here to go back to Enrolment </a> <br>
+                        <a href="{{ url_for('contentPostgrad') }}" class="buttontonext"> Click here to go back to the Postgraduate degree </a>
                     </div>
                 </div>
+
+                <!--Creating buttons on sides of carousel slides to navigate "next slide" and "previous slide"-->
                 <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -114,13 +129,19 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
                 </a>
+                
+                <!--Javascript to code for progress bar.-->
                 <script>
+                    // variable totalSlies is set to the total number of slides in the given carousel.
                     var totalSlides = 5;
+                    // Pulling id "myCarousel" from the HTML.
                     $('#myCarousel').carousel();
 
+                    //Defining a function "progressMovement" to move progress bar according to numSlide (data-step defines slide number).
                     $('#myCarousel').on('slide.bs.carousel', function(progressMovement) {
-                    
                     var numSlide = $(progressMovement.relatedTarget).data('step');
+
+                    //Percent that progress bar moves to is calculated with following formula using slide number and then applied to css.
                     var percent = (parseInt(numSlide) / totalSlides) * 100;
                     $('.progress-bar').css({width: percent + '%'}); 
                     })
