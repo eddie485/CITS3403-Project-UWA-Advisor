@@ -168,5 +168,5 @@
   // Event listeners
   submitButton.addEventListener('click', showResults);
   previousButton.addEventListener("click", showPreviousSlide);
-  nextButton.addEventListener("click", showNextSlide);
+  nextButton.addEventListener("click", showNextSlide);  
 })();

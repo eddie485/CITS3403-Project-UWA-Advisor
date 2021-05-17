@@ -119,5 +119,11 @@ def studyPlanDS():
 def studyPlanFINA():
     return render_template("studyPlanFINA.html", title="Study Plan - Finance")
 
+@app.route("/submit")
+def submit(data):
+    score_submission = Score(score = data )
+    db.session.add(score_submission)
+    db.session.commit()
+
 if __name__=="__main__":
     app.run(debug=True)
