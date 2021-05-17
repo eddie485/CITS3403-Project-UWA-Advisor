@@ -34,6 +34,14 @@ Additionally on windows you must install python off the website available at htt
 ```
 sudo apt-install python3.8
 ```
+Migrations and app.db were deleted in the final commit in order for the selenium testing to be able to be conducted. 
+To initialise and start the database:
+```
+flask db init
+flask db migrate -m Usertable
+flask db upgrade
+flask run
+```
 
 Next, you must set up the virtual environment in which the project is run. This can be done through python using the following commands.
 In the command line, go to the project's directory and type: 
