@@ -1,8 +1,8 @@
-"""User Table
+"""empty message
 
-Revision ID: 83a82259c2f5
+Revision ID: 10b94bb80b8f
 Revises: 
-Create Date: 2021-05-17 14:12:51.027315
+Create Date: 2021-05-17 18:04:06.914387
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '83a82259c2f5'
+revision = '10b94bb80b8f'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -26,14 +26,14 @@ def upgrade():
     sa.Column('year', sa.Integer(), nullable=True),
     sa.Column('studentid', sa.Integer(), nullable=True),
     sa.Column('dateofbirth', sa.Date(), nullable=True),
-    sa.Column('email', sa.String(length=128), nullable=True),
+    sa.Column('email', sa.String(length=64), nullable=True),
     sa.Column('password_hash', sa.String(length=128), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_user_dateofbirth'), 'user', ['dateofbirth'], unique=False)
     op.create_index(op.f('ix_user_email'), 'user', ['email'], unique=True)
     op.create_index(op.f('ix_user_major'), 'user', ['major'], unique=False)
-    op.create_index(op.f('ix_user_name'), 'user', ['name'], unique=True)
+    op.create_index(op.f('ix_user_name'), 'user', ['name'], unique=False)
     op.create_index(op.f('ix_user_studentid'), 'user', ['studentid'], unique=True)
     op.create_index(op.f('ix_user_username'), 'user', ['username'], unique=True)
     op.create_index(op.f('ix_user_year'), 'user', ['year'], unique=False)

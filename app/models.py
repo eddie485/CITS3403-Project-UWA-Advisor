@@ -6,7 +6,7 @@ class User(UserMixin, db.Model):
     __tablename__ = "user"
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(64), index = True, unique = True)
-    name = db.Column(db.String(64), index=True, unique=True)
+    name = db.Column(db.String(64), index=True, unique=False)
     major = db.Column(db.String(64), index = True, unique = False)
     year = db.Column(db.Integer, index = True, unique = False)
     studentid = db.Column(db.Integer, index = True, unique = True)
