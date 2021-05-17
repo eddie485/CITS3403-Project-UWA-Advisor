@@ -1,7 +1,6 @@
 from app import app, db
-<<<<<<< HEAD
 from app.models import User, Score
-from app.forms import LoginForm, RegistrationForm
+from app.forms import LoginForm, RegistrationForm, EditProfileForm
 from flask import render_template, request, redirect, url_for, flash, jsonify
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
@@ -10,25 +9,6 @@ from werkzeug.urls import url_parse
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('homePage'))
-=======
-from app.models import User
-from app.forms import LoginForm, RegistrationForm, EditProfileForm
-from flask import render_template, request, redirect, url_for, flash
-from flask_login import current_user, login_user, logout_user, login_required
-from werkzeug.urls import url_parse
-
-# Main/index route is the login page
-# Users are asked to put in their credentials for log in, assuning they already have an account
-# If the input passes validation they are redirected to the homepage
-#The below code is adapted from Miguel Grinberg's Flask Megatutorial to fit our project's functionality.
-
-@app.route("/", methods=['GET', 'POST'])
-def login():
-    #Following two lines redirects the user to the UWA Advisor home page once login is authenticated.
-    if current_user.is_authenticated:
-        return redirect(url_for('homePage'))
-
->>>>>>> 9f62ff49539933333c8bcee755047354eee4bfaa
     form = LoginForm()
 
     if form.validate_on_submit():
@@ -36,12 +16,6 @@ def login():
         if user is None or not user.check_password(form.password.data):
             flash("Invalid username or password")
             return redirect(url_for('login'))
-<<<<<<< HEAD
-=======
-
-        login_user(user, remember=form.remember_me.data) 
-        
->>>>>>> 9f62ff49539933333c8bcee755047354eee4bfaa
         login_user(user, remember=form.remember_me.data) 
 
         next_page = request.args.get('next')
@@ -49,46 +23,13 @@ def login():
         if not next_page or url_parse(next_page).netloc != '': 
             next_page = url_for('homePage') 
         return redirect(next_page)
-<<<<<<< HEAD
     return render_template('welcome-login.html', title='Welcome', form=form)
-
-=======
-
-    return render_template('welcome-login.html', title='Welcome', form=form)
-
-# OLD ADMIN LOGIN
-#
->>>>>>> 9f62ff49539933333c8bcee755047354eee4bfaa
-#    error = None 
-#    if request.method == "POST":
-#        if request.form["username"] != "admin" or request.form["pass"] != "adminpass":
-#            error = "You do not have access or your credentials are wrong"
-#        else:
-#         return redirect(url_for("homePage"))
-<<<<<<< HEAD
-
-#    return render_template("welcome-login.html", title="Sign in", error=error)
-=======
-#
-#    return render_template("welcome-login.html", title="Sign in", error=error)
-#
->>>>>>> 9f62ff49539933333c8bcee755047354eee4bfaa
 
 @app.route("/logout") 
 def logout(): 
     logout_user()
     return redirect(url_for('login'))
 
-<<<<<<< HEAD
-=======
-
-# Route for welcome-registration.html
-# Uses RegistrationForm and asks new users for their details
-# Details are then validated to make sure there are no replicates of the unique ones before they are all saved into the database
-#The below code is adapted from Miguel Grinberg's Flask Megatutorial to fit our project's functionality.
-
-
->>>>>>> 9f62ff49539933333c8bcee755047354eee4bfaa
 @app.route("/registration", methods=["GET", "POST"])
 def registration():
     if current_user.is_authenticated:
@@ -111,10 +52,6 @@ def profile():
     form = EditProfileForm()
     return render_template("profile.html", title="Your Profile", form=form)
 
-
-# Route for profileEdit.html
-# Shows user's current account info and also lets users edit their information, 
-# the form then overwrites it's values in the database
 
 @app.route("/profile-edit", methods=['GET', 'POST'])
 @login_required
