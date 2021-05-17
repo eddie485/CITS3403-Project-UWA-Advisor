@@ -68,6 +68,14 @@
           answerContainers[questionNumber].style.color = 'red';
         }
       });
+
+      fetch('/submit/2', {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({score: numCorrect}),
+      }).then(() => {
+        console.log("sent score to server");
+      });
   
       // show number of correct answers out of total
       resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length} correct`;

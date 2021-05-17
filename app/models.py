@@ -27,6 +27,12 @@ class User(UserMixin, db.Model):
 def load_user(id):
     return User.query.get(int(id))
 
+class Score(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    score = db.Column(db.Integer)
+    userid = db.Column(db.Integer, db.ForeignKey("user.id"))
+    quiz_id = db.Column(db.Integer)
+
 #Adding progress class for later when we want to implement individual user progress in a database and connect it via relationships to the primary key user ID
 #class Progress(db.Model):
 #    id = db.Column(db.Integer, primary_key=True)

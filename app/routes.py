@@ -1,13 +1,7 @@
 from app import app, db
-<<<<<<< HEAD
 from app.models import User, Score
 from app.forms import LoginForm, RegistrationForm, EditProfileForm
 from flask import render_template, request, redirect, url_for, flash, jsonify
-=======
-from app.models import User
-from app.forms import LoginForm, RegistrationForm
-from flask import render_template, request, redirect, url_for, flash
->>>>>>> parent of a3cf1b2 (added test data into db)
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
 
@@ -40,11 +34,7 @@ def login():
         if not next_page or url_parse(next_page).netloc != '': 
             next_page = url_for('homePage') 
         return redirect(next_page)
-<<<<<<< HEAD
-    return render_template('welcome-login.html', title='Welcome', form=form)
-=======
     return render_template('welcome-login.html', form=form)
->>>>>>> parent of a3cf1b2 (added test data into db)
 
 @app.route("/logout") 
 def logout(): 
@@ -101,6 +91,30 @@ def profileEdit():
         form.name.data = current_user.name
 
     return render_template('profileEdit.html', title='Edit Profile', form=form)
+
+@app.route("/submit/<int:quiz_id>", methods=["PUT"])
+def submit(quiz_id):
+    if request.method == "PUT":
+        data = request.get_json()
+        score = Score.query.filter_by(userid=current_user.id, quiz_id = quiz_id).first()
+        print("recieve score put request: score={} in quiz {}".format(data['score'], quiz_id))
+
+        if score is None:
+            print("score is none")
+            print("score set to {}".format(data['score']))
+            new_score = Score(
+                score=data['score'],
+                quiz_id = quiz_id,
+                userid= current_user.id)
+            db.session.add(new_score)
+            db.session.commit()
+
+        elif score.score < data['score']:
+            score.score = data['score']
+            print("update score to {}".format(score.score))
+            db.session.commit()
+
+    return jsonify({"status": "Ok"})
 
 
 # The remaining routes bellow are all links to their respective html pages
@@ -166,6 +180,7 @@ def studyPlanDS():
 @app.route("/study-plan-FINA")
 def studyPlanFINA():
     return render_template("studyPlanFINA.html", title="Study Plan - Finance")
+
 
 if __name__=="__main__":
     app.run(debug=True)
